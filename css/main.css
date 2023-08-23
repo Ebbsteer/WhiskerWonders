@@ -71,9 +71,13 @@ header {
 
 
 
+/* --- Footer --------------------------------------------------- */
 
-
-
+Footer {
+    background-color: #E2B899;
+    height: 360px;
+    width: 100%;
+}
 
 
 
