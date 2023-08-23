@@ -1,6 +1,7 @@
 /* --- General ---------------------------------------- */
 
 body {
+    background-color: #FFF1DD;
     font-family: "Open Sans", sans-serif;
     color: #272829;
 }
@@ -64,9 +65,10 @@ h6 {
 
 header {
     background-color: #E2B899;
-    height: 100px;
+    height: 120px;
     width: 100%;
 }
+
 
 
 
