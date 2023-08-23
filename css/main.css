@@ -1,6 +1,7 @@
 /* --- General ---------------------------------------- */
 
 body {
+    background-color: #FFF1DD;
     font-family: "Open Sans", sans-serif;
     color: #272829;
 }
@@ -57,3 +58,31 @@ h6 {
    visibility: visible;
    opacity: 1;
 }
+
+
+
+/* --- Header --------------------------------------------------- */
+
+header {
+    background-color: #E2B899;
+    height: 120px;
+    width: 100%;
+}
+
+
+
+/* --- Footer --------------------------------------------------- */
+
+Footer {
+    background-color: #E2B899;
+    height: 360px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
