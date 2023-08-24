@@ -42,10 +42,6 @@ h6 {
     height: auto;
 }
 
-.center {
-    justify-content: center;
-} 
-
 
 
 /* --- Toggle dark/light mode ---------------------------------------- */
@@ -79,16 +75,19 @@ h6 {
 .dark-light-active {
     background-color: #19120c;
     color: #fff;
+    border: 8px solid #000;
 }
 
-header {
-    background-color: #be977a;
+.dark-light-active a:hover {
+    color: #37b3ed;
+    text-decoration: none;
 }
 
 .dark-light-active a {
     color: #fff;
     text-decoration: none;
 }
+
 
 
 /*--- Back to top button -----------------------------------------*/
@@ -123,11 +122,6 @@ header {
    opacity: 1;
 } 
 
-.dark-light-active a:hover {
-    color: #37b3ed;
-    text-decoration: none;
-}
-
 .dark-light-active .back-to-top {
     position: fixed;
     visibility: hidden;
@@ -158,6 +152,8 @@ header {
    opacity: 1;
 }
 
+
+
 /* --- Header --------------------------------------------------- */
 
 header {
@@ -166,16 +162,25 @@ header {
     width: 100%;
 }
 
+.dark-light-active header {
+    background-color: #9e704d;
+}
+
 header .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-header .container img {
-    width: 500px;
-    height: auto;
-    margin: -120px -70px;
+header .container .header-img {
+    background: url("../img/darkTransLogo.png") center;
+    width: 450px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.dark-light-active header .container .header-img {
+    background: url("../img/lightTransLogo.png") center;
 }
 
 header .bx-cart{
@@ -185,6 +190,7 @@ header .bx-cart{
     
 } 
 
+
 /* --- Welcome ---------------------------------------------------*/
 
 .welcome {
@@ -193,6 +199,28 @@ header .bx-cart{
     width: 100%;
     padding: 0 20px;
     text-align: center;
+}
+
+.dark-light-active .welcome {
+    background-color: #332419;
+}
+
+.welcome h1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 0px 5vw;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.welcome h6 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 0px 1vw 20px 5vw;
+    
+    letter-spacing: 1px;
 }
 
 .welcome p {
@@ -235,18 +263,23 @@ footer {
     height: 360px;
     width: 100%;
     text-align: center;
-    justify-content: center;
 }
 
-footer img {
-    width: 500px;
-    height: auto;
-    margin: -120px -70px;
+.dark-light-active footer {
+    background-color: #9e704d;
 }
 
-/* footer .copyright {
+footer .footer-img {
+    background: url("../img/darkTransLogo.png") center;
+    width: 450px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
 
-} */
+.dark-light-active footer .footer-img {
+    background: url("../img/lightTransLogo.png") center;
+}
+
 
 
 
