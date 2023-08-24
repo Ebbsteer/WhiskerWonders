@@ -1,10 +1,18 @@
+/* --- Color pattern -----------------------
+ 
+          Dark                   Main                    Light
+        #9e704d #ad7c58 #b68a69 #be977a #c6a48b #cfb29c #d7bfad
+
+
+*/
 /* --- General ---------------------------------------- */
 
 body {
-    background-color: #FFF1DD;
+    background-color: #ebdfd6;
     font-family: "Open Sans", sans-serif;
     color: #272829;
-}
+    border: 8px solid #332419;
+} 
 
 a {
     color: #272829;
@@ -25,15 +33,14 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.full-logo {
-    width: 600px;
-    height: 100%;
-    margin: -140px -80px;
+.img-fluid {
+    width: 100%;
+    height: auto;
 }
 
 .center {
     justify-content: center;
-}
+} 
 
 /*--- Back to top button -----------------------------------------*/
 
@@ -44,7 +51,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #d79c71;
+    background: #c6a48b;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -58,24 +65,22 @@ h6 {
 }
   
 .back-to-top:hover {
-    background: #e8c6ad;
+    background: #b68a69;
     color: #fff;
 }
   
 .back-to-top.active {
    visibility: visible;
    opacity: 1;
-}
+} 
 
 
 /* --- Header --------------------------------------------------- */
 
 header {
-    background-color: #E2B899;
+    background-color: #be977a;
     height: fit-content;
     width: 100%;
-
-    
 }
 
 header .container {
@@ -84,27 +89,37 @@ header .container {
     justify-content: space-between;
 }
 
+header .container img {
+    width: 500px;
+    height: auto;
+    margin: -120px -70px;
+}
+
 header .bx-cart{
     font-size: 50px;
 
     padding: auto 0px;
     
-}
-
+} 
 /* --- Footer --------------------------------------------------- */
 
-Footer {
+footer {
     background-color: #E2B899;
     height: 360px;
     width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
-footer .copyright {
-    text-align: center;
-    position: relative;
-    bottom: 0px;
-    
+footer img {
+    width: 500px;
+    height: auto;
+    margin: -120px -70px;
 }
+
+/* footer .copyright {
+
+} */
 
 
 
