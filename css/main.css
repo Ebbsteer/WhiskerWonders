@@ -36,7 +36,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #956fa3;
+    background: #E2B899;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -60,17 +60,23 @@ h6 {
 }
 
 
-
 /* --- Header --------------------------------------------------- */
 
 header {
     background-color: #E2B899;
-    height: 120px;
+    height: fit-content;
     width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header img {
-    margin: -140px 0 0 -80px;
+    margin: -140px -80px;
+}
+
+header .bx-cart{
+    font-size: 50px;
 }
 
 /* --- Footer --------------------------------------------------- */
