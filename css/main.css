@@ -1,4 +1,4 @@
-/* --- Color pattern -----------------------
+/* --- Color pattern -----------------------------------------------
  
           Dark                   Main                    Light
         #9e704d #ad7c58 #b68a69 #be977a #c6a48b #cfb29c #d7bfad
@@ -9,13 +9,13 @@
     Help border - style="border: 1px solid black;"
 
 */
-/* --- General ---------------------------------------- */
+/* --- General ---------------------------------------------------*/
 
 body {
     background-color: #ebdfd6;
     font-family: "Open Sans", sans-serif;
     color: #272829;
-    border: 8px solid #332419;
+    border: 8px solid #332419; 
 } 
 
 a {
@@ -44,7 +44,7 @@ h6 {
 
 
 
-/* --- Toggle dark/light mode ---------------------------------------- */
+/* --- Toggle dark/light mode ------------------------------------*/
 
 .dark-light-toggle {
     position: fixed;
@@ -162,6 +162,7 @@ header {
     width: 100%;
 }
 
+
 .dark-light-active header {
     background-color: #9e704d;
 }
@@ -189,6 +190,44 @@ header .bx-cart{
     padding: auto 0px;
     
 } 
+
+
+
+/*--- Cart toggle ------------------------------------------------*/
+
+.cart-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 42px;
+    transition: all 0.4s;
+    outline: none !important;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.cart-toggle:hover {
+    background: #856198;
+    color: #fff;
+}
+
+.cart-active {
+    overflow: hidden;
+}
+  
+.cart-active #header {
+    right: 0;
+}
+
 
 
 /* --- Welcome ---------------------------------------------------*/
@@ -256,7 +295,7 @@ header .bx-cart{
 
 
 
-/* --- Footer --------------------------------------------------- */
+/* --- Footer ----------------------------------------------------*/
 
 footer {
     background-color: #E2B899;
