@@ -4,6 +4,10 @@
         #9e704d #ad7c58 #b68a69 #be977a #c6a48b #cfb29c #d7bfad
 
 
+
+
+    Help border - style="border: 1px solid black;"
+
 */
 /* --- General ---------------------------------------- */
 
@@ -42,6 +46,51 @@ h6 {
     justify-content: center;
 } 
 
+
+
+/* --- Toggle dark/light mode ---------------------------------------- */
+
+.dark-light-toggle {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 32px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #c6a48b;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.dark-light-toggle:hover {
+    background: #b68a69;
+    color: #fff;
+}
+
+.dark-light-active {
+    background-color: #19120c;
+    color: #fff;
+}
+
+header {
+    background-color: #be977a;
+}
+
+.dark-light-active a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
 /*--- Back to top button -----------------------------------------*/
 
 .back-to-top {
@@ -74,6 +123,40 @@ h6 {
    opacity: 1;
 } 
 
+.dark-light-active a:hover {
+    color: #37b3ed;
+    text-decoration: none;
+}
+
+.dark-light-active .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #c6a48b;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.dark-light-active .back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+  
+.dark-light-active .back-to-top:hover {
+    background: #b68a69;
+    color: #fff;
+}
+  
+.dark-light-active .back-to-top.active {
+   visibility: visible;
+   opacity: 1;
+}
 
 /* --- Header --------------------------------------------------- */
 
@@ -101,6 +184,50 @@ header .bx-cart{
     padding: auto 0px;
     
 } 
+
+/* --- Welcome ---------------------------------------------------*/
+
+.welcome {
+    background-color: #f2e9e3;
+    height: fit-content;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.welcome p {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 20px 5vw;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 5vw 20px 1vw;
+}
+
+@media (max-width: 575px) {
+
+    .welcome p {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .welcome img {
+        width: 70%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+
+}
+
+
+
 /* --- Footer --------------------------------------------------- */
 
 footer {
