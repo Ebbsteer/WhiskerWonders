@@ -85,3 +85,189 @@ h6 {
     color: #fff;
     text-decoration: none;
 }
+
+/* --- Header --------------------------------------------------- */
+
+header {
+    background-color: #cf8f71;
+    height: fit-content;
+    width: 100%;
+}
+
+
+.dark-light-active header {
+    background-color: #9e704d;
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header .container .header-img {
+    background: url("../img/darkTransLogo.png") center;
+    width: 450px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.dark-light-active header .container .header-img {
+    background: url("../img/lightTransLogo.png") center;
+}
+
+header .bx-cart{
+    font-size: 50px;
+
+    padding: auto 0px;
+    
+} 
+
+/*--- Cart toggle ------------------------------------------------*/
+
+.cart-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 42px;
+    transition: all 0.4s;
+    outline: none !important;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.cart-toggle:hover {
+    background: #856198;
+    color: #fff;
+}
+
+.cart-active {
+    overflow: hidden;
+}
+  
+.cart-active #header {
+    right: 0;
+}
+
+
+/* --- Product info ---------------------------------------------------*/
+.welcome {
+    background-color: #eed1be;
+    height: fit-content;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.dark-light-active .welcome {
+    background-color: #332419;
+}
+
+.welcome h1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 0px 5vw;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.welcome h6 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 0px 1vw 20px 5vw;
+    
+    letter-spacing: 1px;
+}
+
+.welcome p {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 20px 5vw;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px 5vw 20px 1vw;
+}
+
+@media (max-width: 575px) {
+
+    .welcome p {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .welcome img {
+        width: 70%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+
+}
+
+/*---------- Product List-----------------------------*/
+
+/* --------scroll bar custom---------------------*/
+#data{
+	float: left;
+	width: 50%;
+	margin-left: 50px;
+	margin-right: 26px;
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #9e6d40;
+	border-radius: 5px;
+box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px -2px 
+rgba(0,0,0,0.25);
+}
+
+
+::-webkit-scrollbar-track{
+	background: linear-gradient(to right, #0c0b0e, #201c29 1px, #100e17 1px,
+		#100e17);
+}
+
+/* --- Footer ----------------------------------------------------*/
+
+footer {
+    background-color: #E2B899;
+    height: 360px;
+    width: 100%;
+    text-align: center;
+}
+
+.dark-light-active footer {
+    background-color: #9e704d;
+}
+
+footer .footer-img {
+    background: url("../img/darkTransLogo.png") center;
+    width: 450px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.dark-light-active footer .footer-img {
+    background: url("../img/lightTransLogo.png") center;
+}
