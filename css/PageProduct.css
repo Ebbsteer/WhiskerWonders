@@ -1,0 +1,87 @@
+/* --- Color pattern -----------------------------------------------
+ 
+          Dark                   Main                    Light
+        #9e704d #ad7c58 #b68a69 #be977a #c6a48b #cfb29c #d7bfad
+
+
+
+
+    Help border - style="border: 1px solid black;"
+
+*/
+/* --- General ---------------------------------------------------*/
+
+body {
+    background-color: #ebdfd6;
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+    border: 8px solid #332419; 
+} 
+
+a {
+    color: #272829;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #37b3ed;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/* --- Toggle dark/light mode ------------------------------------*/
+
+.dark-light-toggle {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 32px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #c6a48b;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.dark-light-toggle:hover {
+    background: #b68a69;
+    color: #fff;
+}
+
+.dark-light-active {
+    background-color: #19120c;
+    color: #fff;
+    border: 8px solid #000;
+}
+
+.dark-light-active a:hover {
+    color: #37b3ed;
+    text-decoration: none;
+}
+
+.dark-light-active a {
+    color: #fff;
+    text-decoration: none;
+}
