@@ -159,7 +159,8 @@ h6 {
 
 
 
-/* --------scroll bar custom---------------------*/
+/* -------- Ccroll bar custom ------------------------------------*/
+
 #data{
 	float: left;
 	width: 50%;
@@ -178,7 +179,6 @@ box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px -2px
 rgba(0,0,0,0.25);
 }
 
-
 ::-webkit-scrollbar-track{
 	background: linear-gradient(to right, #0c0b0e, #201c29 1px, #100e17 1px,
 		#100e17);
@@ -186,14 +186,13 @@ rgba(0,0,0,0.25);
 
 
 
-/* --- Header --------------------------------------------------- */
+/* --- Header ----------------------------------------------------*/
 
 header {
     background-color: #cf8f71;
     height: fit-content;
     width: 100%;
 }
-
 
 .dark-light-active header {
     background-color: #9e704d;
@@ -296,8 +295,42 @@ header .bx-cart{
 
 
 
+/*---------- Category widgets ------------------------------------*/
 
-/*---------- Product List-----------------------------*/
+
+@media (max-width: 767px){
+    .carousel-inner .carousel-item >div{
+        display: none
+    }
+    
+    .carousel-inner .carousel-item >div:first-child{
+        display: block
+    }
+}
+
+.carousel-inner .carousel-item.active, .carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev{
+    display: flex
+}
+
+@media (min-width: 768px){
+    .carousel-inner .carousel-item-end.active, .carousel-inner .carousel-item-next{
+        transform: translateX(25%)
+    }
+    
+    .carousel-inner .carousel-item-start.active, .carousel-inner .carousel-item-prev{
+        transform: translateX(-25%)
+    }
+}
+
+.carousel-inner .carousel-item-end, .carousel-inner .carousel-item-start{
+    transform: translateX(0)
+}
+
+
+
+
+
+/*---------- Product List-----------------------------------------*/
 
 .info {
     height: fit-content;
@@ -326,6 +359,7 @@ display:grid;
 }
 
 
+
 /* --- Footer ----------------------------------------------------*/
 
 footer {
@@ -350,7 +384,7 @@ footer .footer-img {
     background: url("../img/lightTransLogo.png") center;
 }
 
-/* --- Cookies ----------------------------------------------------*/
+/* --- Cookies ---------------------------------------------------*/
 
 .close button{
     width: 200px;
