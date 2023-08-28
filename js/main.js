@@ -148,12 +148,12 @@
 
 
   // })
-  function dark(){
-
-
-    select('body').classList.toggle("dark-light-active");
+  function dark() {
+    document.querySelector('body').classList.toggle("dark-light-active");
   }
+
 })
+
 
 
 
