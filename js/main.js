@@ -140,11 +140,20 @@
 
 
 
-  on('click', '.dark-light-toggle', function(e) {
-    select('body').classList.toggle('dark-light-active')
-    this.classList.toggle('bx-sun')
-    this.classList.toggle('bx-moon')
-  })
+  // on('click', '.dark-light-toggle', function(e) {
+  //   select('body').classList.toggle('dark-light-active')
+  //   this.classList.toggle('bx-sun')
+  //   this.classList.toggle('bx-moon')
 
-})()
+
+
+  // })
+  function dark(){
+
+
+    select('body').classList.toggle("dark-light-active");
+  }
+})
+
+
 
