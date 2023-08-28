@@ -148,7 +148,7 @@
 
 
   // })
-  function dark() {
+  function dark(dark) {
     document.querySelector('body').classList.toggle("dark-light-active");
   }
 
