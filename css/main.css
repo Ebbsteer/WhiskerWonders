@@ -375,6 +375,13 @@ footer .footer-img {
     background: url("../img/lightTransLogo.png") center;
 }
 
+/* --- Cookies ----------------------------------------------------*/
+
+.close button{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
 
 
 
