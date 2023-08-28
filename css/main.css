@@ -201,7 +201,7 @@ header {
 header .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 header .container .header-img {
@@ -209,10 +209,15 @@ header .container .header-img {
     width: 450px;
     height: 100px;
     background-repeat: no-repeat;
+    flex: none;
 }
 
 .dark-light-active header .container .header-img {
     background: url("../img/lightTransLogo.png") center;
+}
+
+.search {
+    flex: 4;
 }
 
 header .bx-cart{
