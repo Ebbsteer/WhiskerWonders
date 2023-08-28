@@ -11,6 +11,10 @@
 */
 /* --- General ---------------------------------------------------*/
 
+.hide {
+    display: none;
+}
+
 body {
     background-color: #ebdfd6;
     font-family: "Open Sans", sans-serif;
