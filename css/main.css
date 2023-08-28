@@ -229,41 +229,6 @@ header .bx-cart{
 
 
 
-/*--- Cart toggle ------------------------------------------------*/
-
-.cart-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9998;
-    border: 0;
-    font-size: 42px;
-    transition: all 0.4s;
-    outline: none !important;
-    color: #fff;
-    width: 80px;
-    height: 80px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.cart-toggle:hover {
-    background: #856198;
-    color: #fff;
-}
-
-.cart-active {
-    overflow: hidden;
-}
-  
-.cart-active #header {
-    right: 0;
-}
-
 
 
 /* --- Welcome ---------------------------------------------------*/
