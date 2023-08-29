@@ -8,11 +8,11 @@ function dark() {
   document.body.addEventListener('scroll',()=>{
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
-      document.getElementById("backtotop").classList.add("active");
+      document.getElementById("backtotop").classList.add("hide");
       // select('.back-to-top').classList.add("hide");
       console.log("Hejsan1");
     } else {
-      document.getElementById("backtotop").classList.remove("active");
+      document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.remove("hide");
       console.log("Hejsan2");
     }
