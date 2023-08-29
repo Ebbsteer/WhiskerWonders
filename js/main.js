@@ -16,7 +16,7 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-  
+
   /**
    * Easy selector helper function
    */
