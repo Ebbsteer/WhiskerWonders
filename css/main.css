@@ -205,7 +205,7 @@ header .container {
 }
 
 header .container .header-img {
-    background: url("../img/darkTransLogo.png") center;
+    background: url("../img/logo/darkTransLogo.png") center;
     width: 410px;
     height: 90px;
     background-repeat: no-repeat;
@@ -213,7 +213,7 @@ header .container .header-img {
 }
 
 .dark-light-active header .container .header-img {
-    background: url("../img/lightTransLogo.png") center;
+    background: url("../img/logo/lightTransLogo.png") center;
 }
 
 .search {
@@ -310,38 +310,6 @@ header .bx-cart{
 
 
 /*---------- Product List-----------------------------*/
-/*
-.info {
-    height: fit-content;
-    min-height: 350px;
-    color: white;
-    width: 100%;
-    margin: auto;
-
-}
-
-.product-desc{
-    text-align: center;
-    padding: 20px 0px;
-
-}
-
-.product-desc h3{
-    font-size: 24px;
-
-}
-
-.product-desc p{
-    font-size: 18px;
-    
-}
-
-
-.main-container{
-    display: flex;
-    align-items: center;
-}
-*/
 
 
 .row_product{
@@ -373,6 +341,16 @@ header .bx-cart{
     color: #1c7c1c;
 }
 
+
+<<<<<<< HEAD
+.product-page {
+ height: ;
+}
+
+
+=======
+>>>>>>> d89a618b74ad680927979ea1765a49714d9e558b
+
 /* --- Footer ----------------------------------------------------*/
 
 footer {
@@ -387,14 +365,14 @@ footer {
 }
 
 footer .footer-img {
-    background: url("../img/darkTransLogo.png") center;
+    background: url("../img/logo/darkTransLogo.png") center;
     width: 450px;
     height: 100px;
     background-repeat: no-repeat;
 }
 
 .dark-light-active footer .footer-img {
-    background: url("../img/lightTransLogo.png") center;
+    background: url("../img/logo/lightTransLogo.png") center;
 }
 
 /* --- Cookies ---------------------------------------------------*/
