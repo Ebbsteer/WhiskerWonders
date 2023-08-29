@@ -8,12 +8,12 @@ function dark() {
   document.body.addEventListener('scroll',()=>{
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
-      // document.getElementById("backtotop").classList.add("active");
-      select('.back-to-top').classList.add("hide");
+      document.getElementById("backtotop").classList.add("active");
+      // select('.back-to-top').classList.add("hide");
       console.log("Hejsan1");
     } else {
-      // document.getElementById("backtotop").classList.remove("active");
-      select('.back-to-top').classList.remove("hide");
+      document.getElementById("backtotop").classList.remove("active");
+      // select('.back-to-top').classList.remove("hide");
       console.log("Hejsan2");
     }
     prevScrollpos = currentScrollPos;
