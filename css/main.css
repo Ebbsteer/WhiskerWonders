@@ -310,38 +310,6 @@ header .bx-cart{
 
 
 /*---------- Product List-----------------------------*/
-/*
-.info {
-    height: fit-content;
-    min-height: 350px;
-    color: white;
-    width: 100%;
-    margin: auto;
-
-}
-
-.product-desc{
-    text-align: center;
-    padding: 20px 0px;
-
-}
-
-.product-desc h3{
-    font-size: 24px;
-
-}
-
-.product-desc p{
-    font-size: 18px;
-    
-}
-
-
-.main-container{
-    display: flex;
-    align-items: center;
-}
-*/
 
 
 .row_product{
@@ -372,6 +340,8 @@ header .bx-cart{
     font-weight: bold;
     color: #1c7c1c;
 }
+
+
 
 /* --- Footer ----------------------------------------------------*/
 
