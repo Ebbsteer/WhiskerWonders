@@ -350,6 +350,8 @@ header .bx-cart{
     margin: 1em;
     text-align: center;
     display: table-cell;
+    justify-content: center;
+
 
 }
 
