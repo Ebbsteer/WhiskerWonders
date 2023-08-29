@@ -356,6 +356,7 @@ header .bx-cart{
     text-align: center;
     display: table-cell;
     justify-content: center;
+    border: none;
 
 
 }
