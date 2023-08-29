@@ -5,12 +5,12 @@ const userCardContainer = document.querySelector("[data-user-cards-container]");
 let products = [{
 
         name: "Bounce & Fetch Buddy",
-        image: "img/fetch.avif",
+        image: "../img/products/B&FB.avif",
         category: "Dog Toys",
         price: "149.95"
         },{
         name: "PuzzlePaws Interactive Toy",
-        image: "img/interactive.avif",
+        image: "../img/products/PIT.avif",
         category: "Dog Toys",
         price: "199.90"
         },{
