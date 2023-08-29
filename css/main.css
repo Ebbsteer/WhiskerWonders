@@ -206,8 +206,8 @@ header .container {
 
 header .container .header-img {
     background: url("../img/darkTransLogo.png") center;
-    width: 450px;
-    height: 100px;
+    width: 410px;
+    height: 90px;
     background-repeat: no-repeat;
     flex: none;
 }
