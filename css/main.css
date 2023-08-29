@@ -344,6 +344,11 @@ header .bx-cart{
 */
 
 
+.row_product{
+    margin-inline: 100px;
+    margin-top: 20px;
+}
+
 .product {
     border: 1px solid #ddd;
     padding: 1em;
@@ -356,10 +361,10 @@ header .bx-cart{
 }
 
 .product img {
-    max-width: 100%;
+    
     height: auto;
     margin: auto;
-    
+    max-width: 50%;
 }
 
 .price {
