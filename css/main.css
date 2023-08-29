@@ -337,6 +337,12 @@ header .bx-cart{
 }
 
 
+.main-container{
+    display: flex;
+    align-items: center;
+}
+
+
 /* --- Footer ----------------------------------------------------*/
 
 footer {
@@ -430,3 +436,7 @@ footer .footer-img {
       height: 17em;
     }
   }
+
+
+
+  
