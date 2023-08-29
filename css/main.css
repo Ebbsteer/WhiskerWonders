@@ -310,38 +310,6 @@ header .bx-cart{
 
 
 /*---------- Product List-----------------------------*/
-/*
-.info {
-    height: fit-content;
-    min-height: 350px;
-    color: white;
-    width: 100%;
-    margin: auto;
-
-}
-
-.product-desc{
-    text-align: center;
-    padding: 20px 0px;
-
-}
-
-.product-desc h3{
-    font-size: 24px;
-
-}
-
-.product-desc p{
-    font-size: 18px;
-    
-}
-
-
-.main-container{
-    display: flex;
-    align-items: center;
-}
-*/
 
 
 .row_product{
@@ -356,6 +324,7 @@ header .bx-cart{
     text-align: center;
     display: table-cell;
     justify-content: center;
+    border: none;
 
 
 }
@@ -373,11 +342,14 @@ header .bx-cart{
 }
 
 
+<<<<<<< HEAD
 .product-page {
  height: ;
 }
 
 
+=======
+>>>>>>> d89a618b74ad680927979ea1765a49714d9e558b
 
 /* --- Footer ----------------------------------------------------*/
 
