@@ -3,20 +3,21 @@ function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
 }
 
-var prevScrollpos = window.scrollY;
+// var prevScrollpos = window.scrollY;
 // window.onscroll = function() {
   window.onscroll = function() {windowScrolled()};
 
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos && currentScrollPos !== 0) {
+    console.log(currentScrollPos);
+    if (currentScrollPos >= 100) {
       document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
     } else {
       document.getElementById("backtotop").classList.add("hide");
       // select('.back-to-top').classList.remove("hide");
     }
-    prevScrollpos = currentScrollPos;
+    // prevScrollpos = currentScrollPos;
   }
 
   (function() {
