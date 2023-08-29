@@ -332,8 +332,14 @@ header .bx-cart{
 }
 
 .product-desc p{
-    font-size: 18px;
+    font-size: 18px;<
     
+}
+
+
+.main-container{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -430,3 +436,7 @@ footer .footer-img {
       height: 17em;
     }
   }
+
+
+
+  
