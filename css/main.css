@@ -311,7 +311,9 @@ header .bx-cart{
 
 /*---------- Product List-----------------------------*/
 
-
+.col-md-4{
+    margin-bottom: 30px;
+}
 .row_product{
     margin-inline: 100px;
     margin-top: 20px;
@@ -325,6 +327,7 @@ header .bx-cart{
     display: table-cell;
     justify-content: center;
     border: none;
+    background-color: #ffffff;
 
 
 }
@@ -341,6 +344,28 @@ header .bx-cart{
     color: #1c7c1c;
 }
 
+.info-prod{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+
+}
+
+.productPage img{
+    max-width: 60%;
+    margin-top: 30px;
+}
+
+.productPage{
+    background-color: #e6ccbb;
+    height: 450px;
+}
+
+
+.product-page {
+ height: 350px;
+}
 
 
 /* --- Footer ----------------------------------------------------*/
