@@ -83,7 +83,7 @@ let products = [{
     });                                                  // 
   }                                          
   localStorage.setItem("products", JSON.stringify(products));
-  var product = products[13];
+  var product = products[131];
   var id = "0";
   
   window.onload = (event) => {
