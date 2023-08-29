@@ -31,35 +31,42 @@
     <!-- Header -->
     <header>
         <div class="container">
+
             <div class="header-img"></div>
 
             <div class="search">
-              <div class="search-wrapper">
-                <div class="search-inputs">
-                    <label for="search">Search Users</label>
-                    <input type="search" class="form-control" name="search" id="search" data-search>
-                </div>
-                <div class="search-suggestions mt-3 hs-menu-inner" data-user-cards-container>
-                    <template class="search-suggestion" data-user-cards-template>
-                        <div class="card hide dropdown-item">
-                            <div class="row no-gutters">
-                                <div class="col-md-3 col-12">
-                                    <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="card-body">
-                                        <h3 class="card-title" data-header></h3>
-                                        <p class="card-text" data-body></p>
+                <div class="search-wrapper">
+
+                    <div class="search-inputs">
+                        <label for="search">Search Users</label>
+                        <input type="search" class="form-control" name="search" id="search" data-search>
+                    </div>
+
+                    <div class="search-suggestions mt-3 hs-menu-inner" data-user-cards-container>
+                        <template class="search-suggestion" data-user-cards-template>
+                            <div class="card hide dropdown-item">
+                                <div class="row no-gutters">
+
+                                    <div class="col-md-3 col-12">
+                                        <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                                    <p class="search-price" data-price></p>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="card-body">
+                                            <h3 class="card-title" data-header></h3>
+                                            <p class="card-text" data-body></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
+                                        <p class="search-price" data-price></p>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                        </div>
-                    </template>
+                        </template>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </div>
@@ -161,7 +168,7 @@
     </div>
 
     <!-- Back to top button -->
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow-alt'></i></a>
+    <a href="#" id="backtotop" class="active back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow-alt'></i></a>
     
     <!-- Footer -->
     <footer> 

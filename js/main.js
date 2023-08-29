@@ -3,14 +3,30 @@ function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
 }
 
-(function() {
+var prevScrollpos = window.scrollY;
+// window.onscroll = function() {
+  window.onscroll = function() {windowScrolled()};
+
+  function windowScrolled() {
+    var currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("backtotop").classList.remove("hide");
+      // select('.back-to-top').classList.add("hide");
+    } else {
+      document.getElementById("backtotop").classList.add("hide");
+      // select('.back-to-top').classList.remove("hide");
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
+  (function() {
   "use strict";
   
   /**
    * Back to top button
    */
   let backtotop = select('.back-to-top')
-  if (backtotop) {
+  /*if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
@@ -20,7 +36,9 @@ function dark() {
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
-  }
+  }*/
+
+  
 
   /**
    * Easy selector helper function
@@ -183,3 +201,17 @@ function dark() {
   }
 
 
+
+  function prod(buttonId){
+    
+    const productIndex = parseInt(buttonId) - 1;
+  
+   const product = products[productIndex];
+   
+    document.getElementById("product-image").src = product.image;
+    document.getElementById("name").textContent = product.name;
+    document.getElementById("product-price").textContent = product.price + " kr";
+
+    
+ 
+}

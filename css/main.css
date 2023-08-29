@@ -12,7 +12,8 @@
 /* --- General ---------------------------------------------------*/
 
 .hide {
-    display: none;
+    display: none !important;
+    visibility: hidden;
 }
 
 body {
@@ -49,7 +50,7 @@ h6 {
 
 
 
-/* --- Toggle dark/light mode ------------------------------------*/
+/* --- Toggle dark/light mode ----------------KLAR--------------------*/
 
 .dark-light-toggle {
     position: fixed;
@@ -216,20 +217,23 @@ header .container .header-img {
     background: url("../img/logo/lightTransLogo.png") center;
 }
 
-.search {
-    flex: 4;
+header .search-wrapper {
+    margin: auto;
+}
+
+header .search-wrapper .search-inputs input{
+    background-color: #f2e9e3;
+    color: #272829;
+}
+
+header .search-suggestions {
+    z-index: 999;
 }
 
 header .bx-cart{
     font-size: 50px;
-
     padding: auto 0px;
-    
 } 
-
-.search-suggestions {
-    z-index: 999;
-}
 
 
 
