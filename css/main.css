@@ -368,6 +368,24 @@ header .bx-cart{
  height: 350px;
 }
 
+
+/*-------Singular product page-----------------------*/
+
+
+.first{
+    height: 600px;
+    background-color:#ffe5bc;
+}
+
+
+.second{
+    height: 700px;
+    background-color: #ffdabe;
+}
+
+
+
+
 /* --- Footer ----------------------------------------------------*/
 
 footer {
