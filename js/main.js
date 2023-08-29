@@ -3,20 +3,21 @@ function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
 }
 
-var prevScrollpos = window.scrollY;
+// var prevScrollpos = window.scrollY;
 // window.onscroll = function() {
   window.onscroll = function() {windowScrolled()};
 
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
+    console.log(currentScrollPos);
+    if (currentScrollPos >= 100) {
       document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
     } else {
       document.getElementById("backtotop").classList.add("hide");
       // select('.back-to-top').classList.remove("hide");
     }
-    prevScrollpos = currentScrollPos;
+    // prevScrollpos = currentScrollPos;
   }
 
   (function() {
@@ -136,6 +137,7 @@ var prevScrollpos = window.scrollY;
    * Scroll with ofset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
+    document.getElementById("backtotop").classList.add("hide");
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
