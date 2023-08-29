@@ -75,16 +75,16 @@ let products = [{
   quantity: 0
   }
 ];                                              // Product list
-  
+localStorage.setItem("products", JSON.stringify(products));
+var product = products[131];
+var id = "0";
   const storedQuantities = JSON.parse(localStorage.getItem("quantities")); // quantity localstorage
   if (storedQuantities) {
     products.forEach((product, index) => {
       product.quantity = storedQuantities[index];
     });                                                  // 
   }                                          
-  localStorage.setItem("products", JSON.stringify(products));
-  var product = products[131];
-  var id = "0";
+  
   
   window.onload = (event) => {
     products.forEach((product, index) => {
