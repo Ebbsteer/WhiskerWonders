@@ -190,7 +190,7 @@ rgba(0,0,0,0.25);
 
 header {
     background-color: #cf8f71;
-    height: fit-content;
+    height: 100px;
     width: 100%;
 }
 
@@ -228,7 +228,7 @@ header .bx-cart{
 } 
 
 .search-suggestions {
-    z-index: 999;
+    z-index: 996;
 }
 
 
@@ -349,6 +349,7 @@ header .bx-cart{
     margin-top: 30px;
     margin-bottom: 50px;
 
+
 }
 
 .productPage img{
@@ -365,6 +366,7 @@ header .bx-cart{
 .product-page {
  height: 350px;
 }
+
 
 /* --- Footer ----------------------------------------------------*/
 
