@@ -310,7 +310,7 @@ header .bx-cart{
 
 
 /*---------- Product List-----------------------------*/
-
+/*
 .info {
     height: fit-content;
     min-height: 350px;
@@ -341,7 +341,36 @@ header .bx-cart{
     display: flex;
     align-items: center;
 }
+*/
 
+
+.row_product{
+    margin-inline: 100px;
+    margin-top: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    display: table-cell;
+    justify-content: center;
+
+
+}
+
+.product img {
+    
+    height: auto;
+    margin: auto;
+    max-width: 50%;
+}
+
+.price {
+    font-weight: bold;
+    color: #1c7c1c;
+}
 
 /* --- Footer ----------------------------------------------------*/
 
