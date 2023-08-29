@@ -202,3 +202,17 @@ var prevScrollpos = window.scrollY;
   }
 
 
+
+  function prod(buttonId){
+    
+    const productIndex = parseInt(buttonId) - 1;
+  
+   const product = products[productIndex];
+   
+    document.getElementById("product-image").src = product.image;
+    document.getElementById("name").textContent = product.name;
+    document.getElementById("product-price").textContent = product.price + " kr";
+
+    
+ 
+}
