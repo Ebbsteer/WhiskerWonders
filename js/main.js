@@ -9,7 +9,7 @@ var prevScrollpos = window.scrollY;
 
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos && currentScrollPos !== 0) {
       document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
     } else {
@@ -136,6 +136,7 @@ var prevScrollpos = window.scrollY;
    * Scroll with ofset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
+    document.getElementById("backtotop").classList.add("hide");
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
