@@ -1,3 +1,8 @@
+
+function dark() {
+  document.querySelector('body').classList.toggle("dark-light-active");
+}
+
 (function() {
   "use strict";
   
@@ -16,7 +21,7 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-  
+
   /**
    * Easy selector helper function
    */
@@ -143,9 +148,7 @@
 
 
 
-  function dark() {
-    document.querySelector('body').classList.toggle("dark-light-active");
-  }
+  
 
   var multipleCardCarousel = document.querySelector(
     "#carouselExampleControls"
