@@ -10,7 +10,7 @@ function dark() {
    * Back to top button
    */
   let backtotop = select('.back-to-top')
-  if (backtotop) {
+  /*if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
@@ -20,6 +20,17 @@ function dark() {
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
+  }*/
+
+  var prevScrollpos = window.scrollY;
+  window.onscroll = function() {
+    var currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("backtotop").classList.add("active");
+    } else {
+      document.getElementById("backtotop").classList.remove("active");
+    }
+    prevScrollpos = currentScrollPos;
   }
 
   /**
