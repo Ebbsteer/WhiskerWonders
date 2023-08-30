@@ -22,10 +22,10 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-    <script type="text/javascript" src="../js/search.js"></script>
-    <script type="text/javascript" src="../js/cookies.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/cart.js"></script>
+    <script type="text/javascript" src="../js/search.js" defer></script>
+    <script type="text/javascript" src="../js/cookies.js"defer></script>
+    <script type="text/javascript" src="../js/main.js"defer></script>
+    <script type="text/javascript" src="../js/cart.js"defer></script>
   </head>
   <body>
 
@@ -127,86 +127,42 @@
 </h5>
 
 
-<div class="search">
-  <div class="search-wrapper">
+<div class="container">
+    <div class="row row_product">
 
-      
+        
+
+
+    
   
-      <div class="search-suggestions hs-menu-inner" data-user-boxs-container>
-          <template class="search-suggestion" data-user-boxs-template>
-              <div class="card  dropdown-item">
-                  <div class="row no-gutters">
+      <div class="col-md-4" data-user-boxs-container>
+          <template class="" data-user-boxs-template>
+            <section class="product">
+              <div class="">
+                  <div class="">
 
-                      <div class="col-md-3 col-12">
-                          <img src="" alt="picture of image" class="card-img img-fluid p-3 border" productdata-image>
+                      
+                          <img src="" alt="picture of image" class="" productdata-image>
                       </div>
 
-                      <div class="col-md-6 col-12">
-                          <div class="card-body">
-                              <h3 class="-title" productdata-header></h3>
-                              <p class="card-text" productdata-body>geh</p>
+                     
+                          <div class="">
+                              <h3 class="" productdata-header></h3>
+                              <p class="" productdata-body>geh</p>
                           </div>
                       </div>
 
-                      <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                          <p class="search-price" productdata-price></p>
+                      <div class=" "> <!-- Added responsive padding classes -->
+                          <p class="s" productdata-price></p>
                       </div>
                       
                   </div>
               </div>
+            </section>
           </template>
       </div>
-  </div>
-</div>
 
-<div class="container">
-    <div class="row row_product">
 
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="2" onclick="prod(2)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="3" onclick="prod(3)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="4" onclick="prod(4)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$19.99</p>
-                <button data-product-id="5" onclick="prod(5)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-          <section class="product">
-              <img src="../img/dog.jpg" alt="">
-              <h2>Product 6</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="price">$19.99</p>
-              <button data-product-id="6" onclick="prod(6)">show product</button>
-          </section>
-      </div>
     </div>
 </div>
 

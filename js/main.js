@@ -1,4 +1,80 @@
 
+// let products = [{
+
+//   name: "Bounce & Fetch Buddy",
+//   image: "../img/products/B&FB.avif",
+//   category: "Dog Toys",
+//   price: "149.95",
+//   quantity: 0
+//   },{
+//   name: "PuzzlePaws Interactive Toy",
+//   image: "../img/products/PIT.avif",
+//   category: "Dog Toys",
+//   price: "199.90",
+//   quantity: 0
+//   },{
+//   name: "TastyTidbits Training Treats",
+//   image: "img/puppy.jpg",
+//   category: "Dog Treats",
+//   price: "84.99",
+//   quantity: 0
+//   },{
+//   name: "NutriChomp Dental Chews",
+//   image: "img/puppy.jpg",
+//   category: "Dog Treats",
+//   price: "119.90",
+//   quantity: 0
+//   },{
+//   name: "FeatherFrenzy Interactive Wand",
+//   image: "img/puppy.jpg",
+//   category: "Cat Toys",
+//   price: "129.95",
+//   quantity: 0
+//   },{
+//   name: "Purrfect Pouncing Plaything",
+//   image: "img/puppy.jpg",
+//   category: "Cat Toys",
+//   price: "99.99",
+//   quantity: 0
+//   },{
+//   name: "WhiskerWholesome Cat Treats",
+//   image: "img/puppy.jpg",
+//   category: "Cat Treats",
+//   price: "64.90",
+//   quantity: 0
+//   },{
+//   name: "NutriMews Crunchy Dental Bites",
+//   image: "img/puppy.jpg",
+//   category: "Cat Treats",
+//   price: "79.99",
+//   quantity: 0
+//   },{
+//   name: "Rolling Retreat Hamster Ball",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Toys",
+//   price: "69.90",
+//   quantity: 0
+//   },{
+//   name: "MiniMaze Adventure Playset",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Toys",
+//   price: "84.90",
+//   quantity: 0
+//   },{
+//   name: "TinyTreats Hamster Delights",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Treats",
+//   price: "49.99",
+//   quantity: 0
+//   },{
+//   name: "NutriNest Hamster Food Mix",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Treats",
+//   price: "79.90",
+//   quantity: 0
+//   }
+// ];
+
 function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
 }
@@ -10,16 +86,16 @@ function dark() {
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
     if (currentScrollPos >= 100) {
-      document.getElementById("backtotop").classList.remove("hide");
+      document.getElementById("backtotop")?.classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
     } else {
-      document.getElementById("backtotop").classList.add("hide");
+      document.getElementById("backtotop")?.classList.add("hide");
       // select('.back-to-top').classList.remove("hide");
     }
     // prevScrollpos = currentScrollPos;
   }
   let closeCookieBtn = document.getElementById("closeCookie");
-  closeCookieBtn.addEventListener("click", closeCookies);
+  closeCookieBtn?.addEventListener("click", closeCookies);
 
   function closeCookies() {
     document.getElementById("lawmsg").classList.add("hide");
@@ -178,7 +254,7 @@ function dark() {
   var multipleCardCarousel = document.querySelector(
     "#carouselExampleControls"
   );
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  if (multipleCardCarousel && window.matchMedia("(min-width: 768px)").matches) {
     var carousel = new bootstrap.Carousel(multipleCardCarousel, {
       interval: false,
     });
@@ -221,8 +297,11 @@ function dark() {
 
   const boxElements = []; // Array to hold cloned card elements
 
-  window.onload = (event) => {
+
+  addEventListener('load', () => 
+ {
     products.forEach(product => {
+      console.log("Loaded");
         const box = userboxTemplate.content.cloneNode(true).children[0];
         const productheader = box.querySelector("[productdata-header]");
         const productsearch_image = box.querySelector("[productdata-image]");
@@ -236,7 +315,12 @@ function dark() {
 
         boxElements.push({ name: product.name, category: product.category, price: product.price, element: box });
     }); 
+    
+
   }
+  )
+  
+
 
 
 
