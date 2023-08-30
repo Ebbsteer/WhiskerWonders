@@ -1,4 +1,80 @@
 
+// let products = [{
+
+//   name: "Bounce & Fetch Buddy",
+//   image: "../img/products/B&FB.avif",
+//   category: "Dog Toys",
+//   price: "149.95",
+//   quantity: 0
+//   },{
+//   name: "PuzzlePaws Interactive Toy",
+//   image: "../img/products/PIT.avif",
+//   category: "Dog Toys",
+//   price: "199.90",
+//   quantity: 0
+//   },{
+//   name: "TastyTidbits Training Treats",
+//   image: "img/puppy.jpg",
+//   category: "Dog Treats",
+//   price: "84.99",
+//   quantity: 0
+//   },{
+//   name: "NutriChomp Dental Chews",
+//   image: "img/puppy.jpg",
+//   category: "Dog Treats",
+//   price: "119.90",
+//   quantity: 0
+//   },{
+//   name: "FeatherFrenzy Interactive Wand",
+//   image: "img/puppy.jpg",
+//   category: "Cat Toys",
+//   price: "129.95",
+//   quantity: 0
+//   },{
+//   name: "Purrfect Pouncing Plaything",
+//   image: "img/puppy.jpg",
+//   category: "Cat Toys",
+//   price: "99.99",
+//   quantity: 0
+//   },{
+//   name: "WhiskerWholesome Cat Treats",
+//   image: "img/puppy.jpg",
+//   category: "Cat Treats",
+//   price: "64.90",
+//   quantity: 0
+//   },{
+//   name: "NutriMews Crunchy Dental Bites",
+//   image: "img/puppy.jpg",
+//   category: "Cat Treats",
+//   price: "79.99",
+//   quantity: 0
+//   },{
+//   name: "Rolling Retreat Hamster Ball",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Toys",
+//   price: "69.90",
+//   quantity: 0
+//   },{
+//   name: "MiniMaze Adventure Playset",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Toys",
+//   price: "84.90",
+//   quantity: 0
+//   },{
+//   name: "TinyTreats Hamster Delights",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Treats",
+//   price: "49.99",
+//   quantity: 0
+//   },{
+//   name: "NutriNest Hamster Food Mix",
+//   image: "img/puppy.jpg",
+//   category: "Hamster Treats",
+//   price: "79.90",
+//   quantity: 0
+//   }
+// ];
+
 function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
 }
@@ -10,16 +86,16 @@ function dark() {
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
     if (currentScrollPos >= 100) {
-      document.getElementById("backtotop").classList.remove("hide");
+      document.getElementById("backtotop")?.classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
     } else {
-      document.getElementById("backtotop").classList.add("hide");
+      document.getElementById("backtotop")?.classList.add("hide");
       // select('.back-to-top').classList.remove("hide");
     }
     // prevScrollpos = currentScrollPos;
   }
   let closeCookieBtn = document.getElementById("closeCookie");
-  closeCookieBtn.addEventListener("click", closeCookies);
+  closeCookieBtn?.addEventListener("click", closeCookies);
 
   function closeCookies() {
     document.getElementById("lawmsg").classList.add("hide");
@@ -178,7 +254,7 @@ function dark() {
   var multipleCardCarousel = document.querySelector(
     "#carouselExampleControls"
   );
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  if (multipleCardCarousel && window.matchMedia("(min-width: 768px)").matches) {
     var carousel = new bootstrap.Carousel(multipleCardCarousel, {
       interval: false,
     });
@@ -207,18 +283,90 @@ function dark() {
     $(multipleCardCarousel).addClass("slide");
   }
 
+
+
+  // -------Products----------------
+
+
+  
+  const userboxTemplate = document.querySelector("[data-user-boxs-template]");
+  const userboxContainer = document.querySelector("[data-user-boxs-container]");
   
 
-  function prod(buttonId){
+
+
+  const boxElements = []; // Array to hold cloned card elements
+
+
+  addEventListener('load', () => 
+ {
+    products.forEach(product => {
+      console.log("Loaded");
+        const box = userboxTemplate.content.cloneNode(true).children[0];
+        const productheader = box.querySelector("[productdata-header]");
+        const productsearch_image = box.querySelector("[productdata-image]");
+        const productbody = box.querySelector("[productdata-body]");
+        const productprice = box.querySelector("[productdata-price]");
+        productheader.textContent = product.name;
+        productsearch_image.src = product.image;
+        productbody.textContent = product.category;
+        productprice.textContent = product.price + " kr";
+        userboxContainer.appendChild(box);
+
+        boxElements.push({ name: product.name, category: product.category, price: product.price, element: box });
+    }); 
     
-    const productIndex = parseInt(buttonId) - 1;
+
+  }
+  )
   
-   const product = products[productIndex];
-   
+
+
+
+
+
+
+
+
+
+
+  let selectedProductId = null;
+
+
+  function prod(productId) {
+    selectedProductId = productId;
+
+    // Update the chosen product information (image, name, price)
+    const product = products[productId - 1];
     document.getElementById("product-image").src = product.image;
     document.getElementById("name").textContent = product.name;
     document.getElementById("product-price").textContent = product.price + " kr";
 
-    
- 
+    // Update the "Buy" button's behavior
+    updateBuyButton();
+}
+
+function buySelectedProduct() {
+  if (selectedProductId !== null) {
+      const productIndex = selectedProductId - 1;
+      const selectedProduct = products[productIndex];
+
+      selectedProduct.quantity += 1;
+
+      const updatedQuantities = products.map(product => product.quantity);
+      localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
+
+      addLS();
+  }
+}
+
+
+function updateBuyButton() {
+  const buyButton = document.getElementById("buy-button");
+
+  if (selectedProductId !== null) {
+      buyButton.style.visibility = "visible";
+  } else {
+      buyButton.style.visibility = "hidden";
+  }
 }

@@ -226,7 +226,18 @@ header .header-container .header-img {
 
 
 
-/* products */
+
+/* Links */
+
+header .links {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    header .links {
+        display: block;
+    }
+}
 
 .header-container .products {
     height: fit-content;
@@ -236,15 +247,8 @@ header .header-container .header-img {
 }
 
 .header-container .products:hover {
-    height: fit-content;
-    width: 100px;
-    text-align: center;
     color: #272829;
 }
-
-
-
-/* Contact */
 
 .header-container .contact {
     height: fit-content;
@@ -255,9 +259,6 @@ header .header-container .header-img {
 }
 
 .header-container .contact:hover {
-    height: fit-content;
-    width: 100px;
-    text-align: center;
     color: #272829;
 }
 
@@ -266,8 +267,15 @@ header .header-container .header-img {
 /* Search */
 
 header .search {
-    margin: auto 8vw;
+    margin: auto 2vw;
     flex: 4;
+}
+
+@media (min-width: 900px) {
+    header .search {
+        margin: auto 4vw;
+        flex: 4;
+    }
 }
 
 header .search-wrapper .search-inputs input{

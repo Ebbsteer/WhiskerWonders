@@ -22,10 +22,10 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-    <script type="text/javascript" src="../js/search.js"></script>
-    <script type="text/javascript" src="../js/cookies.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/cart.js"></script>
+    <script type="text/javascript" src="../js/search.js" defer></script>
+    <script type="text/javascript" src="../js/cookies.js"defer></script>
+    <script type="text/javascript" src="../js/main.js"defer></script>
+    <script type="text/javascript" src="../js/cart.js"defer></script>
   </head>
   <body>
 
@@ -34,36 +34,60 @@
     
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="header-container">
+
             <div class="header-img"></div>
 
-            <div class="search">
-              <div class="search-wrapper">
-                <div class="search-inputs">
-                    <label for="search">Search Users</label>
-                    <input type="search" class="form-control" name="search" id="search" data-search>
+            <div class="links">
+                <div class="products">
+                    <a href="productPage.html" class="products">
+                        Products
+                    </a>
                 </div>
-                <div class="search-suggestions mt-3 hs-menu-inner" data-user-cards-container>
-                    <template class="search-suggestion" data-user-cards-template>
-                        <div class="card hide dropdown-item">
-                            <div class="row no-gutters">
-                                <div class="col-md-3 col-12">
-                                    <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="card-body">
-                                        <h3 class="card-title" data-header></h3>
-                                        <p class="card-text" data-body></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                                    <p class="search-price" data-price></p>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
+
+                <div class="contact">
+                    <a href="contact.html" class="contact">
+                        Contact
+                    </a>
                 </div>
             </div>
+
+            <div class="search">
+                <div class="search-wrapper">
+
+                    <div class="search-inputs">
+                        <input type="search" class="form-control" placeholder="ex. dog, candy, ..." name="search" id="search" data-search>
+                    </div>
+
+                    <div class="search-suggestions hs-menu-inner" data-user-cards-container>
+                        <template class="search-suggestion" data-user-cards-template>
+                            <div class="card hide dropdown-item">
+                                <div class="row no-gutters">
+
+                                    <div class="col-md-3 col-12">
+                                        <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="card-body">
+                                            <h3 class="card-title" data-header></h3>
+                                            <p class="card-text" data-body></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
+                                        <p class="search-price" data-price></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart">
+                <i class="bx bx-cart"></i>
             </div>
 
         </div>
@@ -99,65 +123,46 @@
 <!-- Product list -->
 
 <h5 class="info-prod">
-    4/12
+    6/12
 </h5>
+
 
 <div class="container">
     <div class="row row_product">
-        <div class="col-md-4">
+
+        
+
+
+    
+  
+      <div class="col-md-4" data-user-boxs-container>
+          <template class="" data-user-boxs-template>
             <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$19.99</p>
-                <button data-product-id="1" onclick="prod(1)">show product</button>
+              <div class="">
+                  <div class="">
+
+                      
+                          <img src="" alt="picture of image" class="" productdata-image>
+                      </div>
+
+                     
+                          <div class="">
+                              <h3 class="" productdata-header></h3>
+                              <p class="" productdata-body>geh</p>
+                          </div>
+                      </div>
+
+                      <div class=" "> <!-- Added responsive padding classes -->
+                          <p class="s" productdata-price></p>
+                      </div>
+                      
+                  </div>
+              </div>
             </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="2" onclick="prod(2)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="3" onclick="prod(3)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$29.99</p>
-                <button data-product-id="4" onclick="prod(4)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section class="product">
-                <img src="../img/dog.jpg" alt="">
-                <h2>Product 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p class="price">$19.99</p>
-                <button data-product-id="5" onclick="prod(5)">show product</button>
-            </section>
-        </div>
-        <div class="col-md-4">
-          <section class="product">
-              <img src="../img/dog.jpg" alt="">
-              <h2>Product 6</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="price">$19.99</p>
-              <button data-product-id="6" onclick="prod(6)">show product</button>
-          </section>
+          </template>
       </div>
+
+
     </div>
 </div>
 
