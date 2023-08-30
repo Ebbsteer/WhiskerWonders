@@ -43,23 +43,7 @@ var id = "0";
   
     check();
   };
-  
-  function buy(buttonId) {
-
-   
-    id = buttonId;
-    const productIndex = parseInt(buttonId) - 1;
-  
-    product = products[productIndex];
-  
-    product.quantity += 1;
-    
-    const updatedQuantities = products.map(product => product.quantity);
-    localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
-    
-  
-    addLS();
-  }
+ 
   
   function addLS() {
   document.getElementById(id).innerHTML = `${product.name} (Price: ${product.price} kr) - Quantity: ${product.quantity} st`;

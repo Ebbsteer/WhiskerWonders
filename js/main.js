@@ -207,18 +207,44 @@ function dark() {
     $(multipleCardCarousel).addClass("slide");
   }
 
-  
 
-  function prod(buttonId){
-    
-    const productIndex = parseInt(buttonId) - 1;
-  
-   const product = products[productIndex];
-   
+  let selectedProductId = null;
+
+
+  function prod(productId) {
+    selectedProductId = productId;
+
+    // Update the chosen product information (image, name, price)
+    const product = products[productId - 1];
     document.getElementById("product-image").src = product.image;
     document.getElementById("name").textContent = product.name;
     document.getElementById("product-price").textContent = product.price + " kr";
 
-    
- 
+    // Update the "Buy" button's behavior
+    updateBuyButton();
+}
+
+function buySelectedProduct() {
+  if (selectedProductId !== null) {
+      const productIndex = selectedProductId - 1;
+      const selectedProduct = products[productIndex];
+
+      selectedProduct.quantity += 1;
+
+      const updatedQuantities = products.map(product => product.quantity);
+      localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
+
+      addLS();
+  }
+}
+
+
+function updateBuyButton() {
+  const buyButton = document.getElementById("buy-button");
+
+  if (selectedProductId !== null) {
+      buyButton.style.visibility = "visible";
+  } else {
+      buyButton.style.visibility = "hidden";
+  }
 }
