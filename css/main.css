@@ -187,7 +187,7 @@ rgba(0,0,0,0.25);
 
 
 
-/* --- Header ----------------------------------------------------*/
+/* --- Header --------------------------------KLAR--------------------*/
 
 header {
     background-color: #cf8f71;
@@ -253,6 +253,10 @@ header .links {
         height: 1px;
         left: 15px;
         background: #000;
+    }
+
+    .dark-light-active header .header-container .products::after {
+        background: #fff;
     }
 }
 
@@ -402,6 +406,7 @@ header .cart{
 
     .welcome img {
         width: 70%;
+        max-width: 435px;
         height: auto;
         padding: 10px 0;
     }
@@ -411,10 +416,11 @@ header .cart{
 
 
 
+
 /*---------- Category widgets ------------------------------------*/
 
 .carousel-inner {
-    padding: 1em;
+    padding: 20px 10vw;
 }
 
 .card {
@@ -433,7 +439,7 @@ header .cart{
     transform: translateY(-50%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
     .carousel-item {
       margin-right: 0;
       flex: 0 0 33.333333%;
