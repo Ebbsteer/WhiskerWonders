@@ -9,7 +9,6 @@ function dark() {
 
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
-    console.log(currentScrollPos);
     if (currentScrollPos >= 100) {
       document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
@@ -18,6 +17,12 @@ function dark() {
       // select('.back-to-top').classList.remove("hide");
     }
     // prevScrollpos = currentScrollPos;
+  }
+  let closeCookieBtn = document.getElementById("closeCookie");
+  closeCookieBtn.addEventListener("click", closeCookies);
+
+  function closeCookies() {
+    document.getElementById("lawmsg").classList.add("hide");
   }
 
   (function() {
@@ -39,7 +44,7 @@ function dark() {
     onscroll(document, toggleBacktotop)
   }*/
 
-  
+   
 
   /**
    * Easy selector helper function
@@ -202,7 +207,7 @@ function dark() {
     $(multipleCardCarousel).addClass("slide");
   }
 
-
+  
 
   function prod(buttonId){
     

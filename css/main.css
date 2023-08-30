@@ -96,7 +96,7 @@ h6 {
 
 
 
-/*--- Back to top button -----------------------------------------*/
+/*--- Back to top button ---------------------KLAR--------------------*/
 
 .back-to-top {
     position: fixed;
@@ -160,7 +160,7 @@ h6 {
 
 
 
-/* -------- Ccroll bar custom ------------------------------------*/
+/* -------- Scroll bar custom -----------------KLAR-------------------*/
 
 #data{
 	float: left;
@@ -191,55 +191,109 @@ rgba(0,0,0,0.25);
 
 header {
     background-color: #cf8f71;
-    height: fit-content;
+    height: 110px;
     width: 100%;
+    padding-top: 10px;
 }
 
 .dark-light-active header {
     background-color: #9e704d;
 }
 
-header .container {
+header .header-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    
 }
 
-header .container .header-img {
-    background: url("../img/logo/darkTransLogo.png") center;
-    width: 410px;
+
+
+/* Image */
+
+header .header-container .header-img {
+    background: url("../img/logo/darkTransLogo2.png") center;
+    width: 110px;
     height: 90px;
     background-repeat: no-repeat;
     flex: none;
+    margin-left: 10px;
 }
 
-.dark-light-active header .container .header-img {
-    background: url("../img/logo/lightTransLogo.png") center;
+.dark-light-active header .header-container .header-img {
+    background: url("../img/logo/lightTransLogo2.png") center;
 }
 
-header .search-wrapper {
-    margin: auto;
+
+
+/* products */
+
+.header-container .products {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    flex: none;
+}
+
+.header-container .products:hover {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    color: #272829;
+}
+
+
+
+/* Contact */
+
+.header-container .contact {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    flex: none;
+
+}
+
+.header-container .contact:hover {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    color: #272829;
+}
+
+
+
+/* Search */
+
+header .search {
+    margin: auto 8vw;
+    flex: 4;
 }
 
 header .search-wrapper .search-inputs input{
     background-color: #f2e9e3;
     color: #272829;
+    
 }
 
 header .search-suggestions {
     z-index: 999;
 }
 
-header .bx-cart{
+
+
+/* Cart */
+
+header .cart{
+    width: 50px;
     font-size: 50px;
     padding: auto 0px;
+    margin-right: 20px;
 } 
 
 
 
-
-
-/* --- Welcome ---------------------------------------------------*/
+/* --- Welcome ---------------------------OK------------------------*/
 
 .welcome {
     background-color: #f2e9e3;
@@ -306,10 +360,54 @@ header .bx-cart{
 
 /*---------- Category widgets ------------------------------------*/
 
+.carousel-inner {
+    padding: 1em;
+}
 
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
 
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+@media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+}
 
+.card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.card img {
+      max-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+}
 
 
 
@@ -318,11 +416,12 @@ header .bx-cart{
 .col-md-4{
     margin-bottom: 30px;
 }
+
 .row_product{
     margin-inline: 100px;
     margin-top: 20px;
     margin-bottom: 50px;
-}
+}    
 
 .product {
     border: 1px solid #ddd;
@@ -335,44 +434,43 @@ header .bx-cart{
     background-color: #ffffff;
 
 
-}
+}    
 
 .product img {
     
     height: auto;
     margin: auto;
     max-width: 50%;
-}
+}    
 
 .price {
     font-weight: bold;
     color: #1c7c1c;
-}
+}    
 
 .info-prod{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
 
-}
+}    
 
 .productPage img{
     max-width: 60%;
     margin-top: 30px;
-}
+}    
 
 .productPage{
     background-color: #e6ccbb;
     height: 450px;
-}
+}    
 
 
 .product-page {
- height: 350px;
-}
+ height: 350px;   
+} 
 
 .containerpage button {
-    height: ;
     width: 300px;
     text-align: center;
     background-color: #ffecde;
@@ -401,8 +499,12 @@ header .bx-cart{
     padding: 2vw;
     height: 700px;
     background-color: #ffdabe;
+
     
 }
+
+
+
 
 .infobar{
     width: 30%;
@@ -414,8 +516,19 @@ header .bx-cart{
     
 }
 
+.infobar p {
+    width: 60%;
+    margin: auto;
+    margin-left: 120px;
+    margin-top: 50px;
+}
 
-
+.infobar img{
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
 
 .infobar-that{
     width: 40%;
@@ -424,9 +537,10 @@ header .bx-cart{
     margin-top: 50px;
     background-color: #f6f3e0;
     float: right;
-    
-    
+
 }
+
+
 
 /*-------Singular product page - images-----------------------*/
 
@@ -463,22 +577,22 @@ footer {
     height: 360px;
     width: 100%;
     text-align: center;
-}
+}    
 
 .dark-light-active footer {
     background-color: #9e704d;
-}
+}    
 
 footer .footer-img {
     background: url("../img/logo/darkTransLogo.png") center;
     width: 450px;
     height: 100px;
     background-repeat: no-repeat;
-}
+}    
 
 .dark-light-active footer .footer-img {
     background: url("../img/logo/lightTransLogo.png") center;
-}
+}    
 
 /* --- Cookies ---------------------------------------------------*/
 
@@ -491,64 +605,20 @@ footer .footer-img {
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid rgb(160, 141, 128);
-}
+}    
 
 #lawmsg button {
     background-color: #ffffff;
     border: 1px solid;
 
 
-}
+}    
 
 
 
 
 
 
-
-
-.carousel-inner {
-    padding: 1em;
-  }
-  .card {
-    margin: 0 0.5em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: #e1e1e1;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  @media (min-width: 768px) {
-    .carousel-item {
-      margin-right: 0;
-      flex: 0 0 33.333333%;
-      display: block;
-    }
-    .carousel-inner {
-      display: flex;
-    }
-  }
-  .card .img-wrapper {
-      max-width: 100%;
-      height: 13em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .card img {
-      max-height: 100%;
-  }
-  @media (max-width: 767px) {
-    .card .img-wrapper {
-      height: 17em;
-    }
-  }
 
 
 
