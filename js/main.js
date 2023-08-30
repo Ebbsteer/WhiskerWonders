@@ -207,7 +207,7 @@ function dark() {
     $(multipleCardCarousel).addClass("slide");
   }
 
-
+  
 
   function prod(buttonId){
     
