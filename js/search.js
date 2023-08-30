@@ -17,37 +17,37 @@ let products = [{
         quantity: 0
         },{
         name: "TastyTidbits Training Treats",
-        image: "img/puppy.jpg",
+        image: "../img/products/TTTT.avif",
         category: "Dog Treats",
         price: "84.99",
         quantity: 0
         },{
         name: "NutriChomp Dental Chews",
-        image: "img/puppy.jpg",
+        image: "../img/products/NDC.avif",
         category: "Dog Treats",
         price: "119.90",
         quantity: 0
         },{
         name: "FeatherFrenzy Interactive Wand",
-        image: "img/puppy.jpg",
+        image: "../img/products/FIW.avif",
         category: "Cat Toys",
         price: "129.95",
         quantity: 0
         },{
         name: "Purrfect Pouncing Plaything",
-        image: "img/puppy.jpg",
+        image: "../img/products/PPP.avif",
         category: "Cat Toys",
         price: "99.99",
         quantity: 0
         },{
         name: "WhiskerWholesome Cat Treats",
-        image: "img/puppy.jpg",
+        image: "../img/products/WCT.avif",
         category: "Cat Treats",
         price: "64.90",
         quantity: 0
         },{
         name: "NutriMews Crunchy Dental Bites",
-        image: "img/puppy.jpg",
+        image: "../img/products/NCDB.avif",
         category: "Cat Treats",
         price: "79.99",
         quantity: 0
