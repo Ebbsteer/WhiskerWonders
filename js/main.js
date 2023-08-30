@@ -307,13 +307,15 @@ function dark() {
         const productsearch_image = box.querySelector("[productdata-image]");
         const productbody = box.querySelector("[productdata-body]");
         const productprice = box.querySelector("[productdata-price]");
+        let productquantity = box.querySelector("[productdata-quantity]");
         productheader.textContent = product.name;
         productsearch_image.src = product.image;
         productbody.textContent = product.category;
         productprice.textContent = product.price + " kr";
         userboxContainer.appendChild(box);
-
-        boxElements.push({ name: product.name, category: product.category, price: product.price, element: box });
+        productquantity.numb = product.quantity;
+        boxElements.push({ name: product.name, category: product.category, price: product.price,
+           quantity: product.quantity, element: box });
     }); 
     
 
@@ -335,7 +337,7 @@ function dark() {
 
   function prod(productId) {
     selectedProductId = productId;
-
+    console.log("hej");
     // Update the chosen product information (image, name, price)
     const product = products[productId - 1];
     document.getElementById("product-image").src = product.image;
@@ -346,27 +348,21 @@ function dark() {
     updateBuyButton();
 }
 
+
+
 function buySelectedProduct() {
-  if (selectedProductId !== null) {
-      const productIndex = selectedProductId - 1;
-      const selectedProduct = products[productIndex];
+  console.log("hej");
 
-      selectedProduct.quantity += 1;
+  product = products[productIndex];
+    
+  product.quantity += 1;
 
-      const updatedQuantities = products.map(product => product.quantity);
-      localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
+  const updatedQuantities = products.map(product => product.quantity);
+  localStorage.setItem("quantities", JSON.stringify(updatedQuantities));  // update quantity localstorage
 
-      addLS();
-  }
+  addLS();
+
 }
 
 
-function updateBuyButton() {
-  const buyButton = document.getElementById("buy-button");
-
-  if (selectedProductId !== null) {
-      buyButton.style.visibility = "visible";
-  } else {
-      buyButton.style.visibility = "hidden";
-  }
-}
+f

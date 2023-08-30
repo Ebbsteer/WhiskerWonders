@@ -556,8 +556,8 @@ header .cart{
 
 .second{
     padding: 2vw;
-    height: 700px;
-    background-color: #ffdabe;
+    height: 750px;
+    background-color: #ffe5d1;
 
     
 }
@@ -572,27 +572,32 @@ header .cart{
     margin-top: 50px;
     background-color: #f6f3e0;
     float: left;
+    margin-left: 100px;
     
 }
 
-.infobar p {
+.infobar p, .infobar-that p {
     width: 60%;
     margin: auto;
-    margin-left: 120px;
-    margin-top: 50px;
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+
 }
 
-.infobar img{
-    width: 20%;
-    margin-top: 10px;
-    margin-left: 10px;
-    float: left;
+.infobar h4, .infobar-that h4{
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+
 }
+
 
 .infobar-that{
     width: 40%;
-    height: 500px;
+    height: 600px;
     margin-inline: 70px;
+    margin-right: 90px;
     margin-top: 50px;
     background-color: #f6f3e0;
     float: right;
