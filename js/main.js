@@ -9,7 +9,6 @@ function dark() {
 
   function windowScrolled() {
     var currentScrollPos = window.scrollY;
-    console.log(currentScrollPos);
     if (currentScrollPos >= 100) {
       document.getElementById("backtotop").classList.remove("hide");
       // select('.back-to-top').classList.add("hide");
