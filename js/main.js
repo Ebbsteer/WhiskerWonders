@@ -208,6 +208,44 @@ function dark() {
   }
 
 
+
+  // -------Products----------------
+
+
+  
+  const userboxTemplate = document.querySelector("[data-user-boxs-template]");
+  const userboxContainer = document.querySelector("[data-user-boxs-container]");
+  
+
+
+
+  const boxElements = []; // Array to hold cloned card elements
+
+  window.onload = (event) => {
+    products.forEach(product => {
+        const box = userboxTemplate.content.cloneNode(true).children[0];
+        const productheader = box.querySelector("[productdata-header]");
+        const productsearch_image = box.querySelector("[productdata-image]");
+        const productbody = box.querySelector("[productdata-body]");
+        const productprice = box.querySelector("[productdata-price]");
+        productheader.textContent = product.name;
+        productsearch_image.src = product.image;
+        productbody.textContent = product.category;
+        productprice.textContent = product.price + " kr";
+        userboxContainer.appendChild(box);
+
+        boxElements.push({ name: product.name, category: product.category, price: product.price, element: box });
+    }); 
+  }
+
+
+
+
+
+
+
+
+
   let selectedProductId = null;
 
 
