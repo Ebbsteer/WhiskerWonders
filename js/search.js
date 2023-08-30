@@ -53,25 +53,25 @@ let products = [{
         quantity: 0
         },{
         name: "Rolling Retreat Hamster Ball",
-        image: "img/puppy.jpg",
+        image: "../img/products/RRHB.avif",
         category: "Hamster Toys",
         price: "69.90",
         quantity: 0
         },{
         name: "MiniMaze Adventure Playset",
-        image: "img/puppy.jpg",
+        image: "../img/products/MMAD.avif",
         category: "Hamster Toys",
         price: "84.90",
         quantity: 0
         },{
         name: "TinyTreats Hamster Delights",
-        image: "img/puppy.jpg",
+        image: "../img/products/TTHD.avif",
         category: "Hamster Treats",
         price: "49.99",
         quantity: 0
         },{
         name: "NutriNest Hamster Food Mix",
-        image: "img/puppy.jpg",
+        image: "../img/products/NNHFM.avif",
         category: "Hamster Treats",
         price: "79.90",
         quantity: 0
