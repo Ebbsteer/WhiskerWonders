@@ -529,10 +529,25 @@ header .cart{
  height: 350px;   
 } 
 
+.containerpage button {
+    width: 300px;
+    text-align: center;
+    background-color: #ffecde;
+    border: solid 3px #b49c8b;
+    font-family: "Inter", sans-serif;
+    
+}
 
+.containerpage button :hover{
+    cursor: pointer;
+}
 /*-------Singular product page-----------------------*/
 
-.containerpage{ background-color: #ffe5bc;}
+.containerpage{
+    padding: 2vw;
+     background-color: #fff1da;
+
+}
 
 .first{
     height: 600px;
@@ -540,34 +555,79 @@ header .cart{
 
 
 .second{
-    height: 1000px;
+    padding: 2vw;
+    height: 700px;
     background-color: #ffdabe;
-}    
 
-.infobar{
-    max-width: 30%;
-    height: 400px;
-    margin-inline: 70px;
-    margin-top: 50px;
-    background-color: #f6f3e0;
     
 }
 
 
 
 
+.infobar{
+    width: 30%;
+    height: 400px;
+    margin-inline: 70px;
+    margin-top: 50px;
+    background-color: #f6f3e0;
+    float: left;
+    
+}
+
+.infobar p {
+    width: 60%;
+    margin: auto;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.infobar img{
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
 .infobar-that{
-    max-width: 40%;
+    width: 40%;
     height: 500px;
     margin-inline: 70px;
     margin-top: 50px;
     background-color: #f6f3e0;
-    /* float: ; */
+    float: right;
+
 }
 
 
 
+/*-------Singular product page - images-----------------------*/
 
+.layout{
+margin-top: 50px;
+}
+
+#imgsettingeh {
+    width: 25%;
+    margin-left: -350px;
+}
+
+.small-img-group{
+    display: flex;
+    float:left ;
+    margin-left: 50px;
+    
+}
+
+.small-img-col{
+  
+    cursor: pointer;
+}
+
+.small-img{
+    width: 30%;
+    margin-bottom: 7px;
+}
 
 /* --- Footer ----------------------------------------------------*/
 
