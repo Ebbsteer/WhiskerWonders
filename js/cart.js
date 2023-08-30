@@ -4,7 +4,7 @@
 
 
 localStorage.setItem("products", JSON.stringify(products));
-var product = products[131];
+
 var id = "0";
   const storedQuantities = JSON.parse(localStorage.getItem("quantities")); // quantity localstorage
   if (storedQuantities) {
@@ -14,52 +14,36 @@ var id = "0";
   }                                          
   
   
-  window.onload = (event) => {
-    products.forEach((product, index) => {
-      const buttonId = index + 1;
-      const buttonElement = document.getElementById(buttonId.toString());
+  // window.onload = (event) => {
+  //   products.forEach((product, index) => {
+  //     const buttonId = index + 1;
+  //     const buttonElement = document.getElementById(buttonId.toString());
   
-      if (product.quantity > 0) 
-      {
-      buttonElement.innerHTML = `${product.name} (Price: ${product.price} kr) - Quantity: ${product.quantity} st`;                         
-      } else 
-      {
-      buttonElement.innerHTML = "";
-      const showDivs = document.getElementsByClassName("show");
-      for (let i = 0; i < showDivs.length; i++) 
-      {
-      if (showDivs[i].id === `product-${buttonId}`) {
-      const divButtons = showDivs[i].getElementsByTagName("button");
-      for (let j = 0; j < divButtons.length; j++) {
-          divButtons[j].style.visibility = 'hidden';                                                                           // visar producterna endast om det finns mer än 0 quantity
-        }
-        break; 
-      }
-    }
+  //     if (product.quantity > 0) 
+  //     {
+  //     buttonElement.innerHTML = `${product.name} (Price: ${product.price} kr) - Quantity: ${product.quantity} st`;                         
+  //     } else 
+  //     {
+  //     buttonElement.innerHTML = "";
+  //     const showDivs = document.getElementsByClassName("show");
+  //     for (let i = 0; i < showDivs.length; i++) 
+  //     {
+  //     if (showDivs[i].id === `product-${buttonId}`) {
+  //     const divButtons = showDivs[i].getElementsByTagName("button");
+  //     for (let j = 0; j < divButtons.length; j++) {
+  //         divButtons[j].style.visibility = 'hidden';                                                                           // visar producterna endast om det finns mer än 0 quantity
+  //       }
+  //       break; 
+  //     }
+  //   }
   
-    }
+  //   }
   
-    });
+  //   });
   
-    check();
-  };
-  
-  function buy(buttonId) {
-
-   
-    id = buttonId;
-    const productIndex = parseInt(buttonId) - 1;
-  
-    product = products[productIndex];
-  
-    product.quantity += 1;
-    
-    const updatedQuantities = products.map(product => product.quantity);
-    localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
-    
-  
-    addLS();
-  }
+  //   check();
+  // };
+ 
   
   function addLS() {
   document.getElementById(id).innerHTML = `${product.name} (Price: ${product.price} kr) - Quantity: ${product.quantity} st`;

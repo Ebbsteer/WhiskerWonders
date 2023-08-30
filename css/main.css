@@ -191,35 +191,91 @@ rgba(0,0,0,0.25);
 
 header {
     background-color: #cf8f71;
-    height: fit-content;
+    height: 110px;
     width: 100%;
+    padding-top: 10px;
 }
 
 .dark-light-active header {
     background-color: #9e704d;
 }
 
-header .container {
+header .header-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
 
-header .container .header-img {
-    background: url("../img/logo/darkTransLogo.png") center;
-    width: 410px;
+
+
+/* Image */
+
+header .header-container .header-img {
+    background: url("../img/logo/darkTransLogo2.png") center;
+    width: 110px;
     height: 90px;
     background-repeat: no-repeat;
     flex: none;
+    margin-left: 10px;
 }
 
-.dark-light-active header .container .header-img {
-    background: url("../img/logo/lightTransLogo.png") center;
+.dark-light-active header .header-container .header-img {
+    background: url("../img/logo/lightTransLogo2.png") center;
 }
 
-header .search-wrapper {
-    margin: auto;
+
+
+
+/* Links */
+
+header .links {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    header .links {
+        display: block;
+    }
+}
+
+.header-container .products {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    flex: none;
+}
+
+.header-container .products:hover {
+    color: #272829;
+}
+
+.header-container .contact {
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    flex: none;
+
+}
+
+.header-container .contact:hover {
+    color: #272829;
+}
+
+
+
+/* Search */
+
+header .search {
+    margin: auto 2vw;
+    flex: 4;
+}
+
+@media (min-width: 900px) {
+    header .search {
+        margin: auto 4vw;
+        flex: 4;
+    }
 }
 
 header .search-wrapper .search-inputs input{
@@ -232,12 +288,16 @@ header .search-suggestions {
     z-index: 999;
 }
 
-header .bx-cart{
+
+
+/* Cart */
+
+header .cart{
+    width: 50px;
     font-size: 50px;
     padding: auto 0px;
+    margin-right: 20px;
 } 
-
-
 
 
 
@@ -418,10 +478,25 @@ header .bx-cart{
  height: 350px;   
 } 
 
+.containerpage button {
+    width: 300px;
+    text-align: center;
+    background-color: #ffecde;
+    border: solid 3px #b49c8b;
+    font-family: "Inter", sans-serif;
+    
+}
 
+.containerpage button :hover{
+    cursor: pointer;
+}
 /*-------Singular product page-----------------------*/
 
-.containerpage{ background-color: #ffe5bc;}
+.containerpage{
+    padding: 2vw;
+     background-color: #fff1da;
+
+}
 
 .first{
     height: 600px;
@@ -429,36 +504,79 @@ header .bx-cart{
 
 
 .second{
-    height: 1000px;
+    padding: 2vw;
+    height: 700px;
     background-color: #ffdabe;
-}    
+
+    
+}
+
+
+
 
 .infobar{
-    max-width: 30%;
+    width: 30%;
     height: 400px;
     margin-inline: 70px;
     margin-top: 50px;
     background-color: #f6f3e0;
+    float: left;
     
 }
 
+.infobar p {
+    width: 60%;
+    margin: auto;
+    margin-left: 120px;
+    margin-top: 50px;
+}
 
-
+.infobar img{
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
 
 .infobar-that{
-    max-width: 40%;
+    width: 40%;
     height: 500px;
     margin-inline: 70px;
     margin-top: 50px;
     background-color: #f6f3e0;
-    float: ;
-    
-    
+    float: right;
+
 }
 
 
 
+/*-------Singular product page - images-----------------------*/
 
+.layout{
+margin-top: 50px;
+}
+
+#imgsettingeh {
+    width: 25%;
+    margin-left: -350px;
+}
+
+.small-img-group{
+    display: flex;
+    float:left ;
+    margin-left: 50px;
+    
+}
+
+.small-img-col{
+  
+    cursor: pointer;
+}
+
+.small-img{
+    width: 30%;
+    margin-bottom: 7px;
+}
 
 /* --- Footer ----------------------------------------------------*/
 
