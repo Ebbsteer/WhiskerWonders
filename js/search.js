@@ -52,7 +52,7 @@ let products = [{
         price: "79.99",
         quantity: 0
         },{
-        name: "Rolling Retreat Hamster Ball",
+        name: "Rolling Retreat Hamster Wheel",
         image: "../img/products/RRHB.avif",
         category: "Hamster Toys",
         price: "69.90",
