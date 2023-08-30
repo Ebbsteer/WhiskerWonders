@@ -220,12 +220,6 @@ header .header-container .header-img {
     margin-left: 10px;
 }
 
-header .header-container .header-img a{
-    margin: 0px;
-    padding: 0px;
-    font-size: 90px;
-}
-
 .dark-light-active header .header-container .header-img {
     background: url("../img/logo/lightTransLogo2.png") center;
 }
