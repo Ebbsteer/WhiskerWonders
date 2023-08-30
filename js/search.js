@@ -17,61 +17,61 @@ let products = [{
         quantity: 0
         },{
         name: "TastyTidbits Training Treats",
-        image: "img/puppy.jpg",
+        image: "../img/products/TTTT.avif",
         category: "Dog Treats",
         price: "84.99",
         quantity: 0
         },{
         name: "NutriChomp Dental Chews",
-        image: "img/puppy.jpg",
+        image: "../img/products/NDC.avif",
         category: "Dog Treats",
         price: "119.90",
         quantity: 0
         },{
         name: "FeatherFrenzy Interactive Wand",
-        image: "img/puppy.jpg",
+        image: "../img/products/FIW.avif",
         category: "Cat Toys",
         price: "129.95",
         quantity: 0
         },{
         name: "Purrfect Pouncing Plaything",
-        image: "img/puppy.jpg",
+        image: "../img/products/PPP.avif",
         category: "Cat Toys",
         price: "99.99",
         quantity: 0
         },{
         name: "WhiskerWholesome Cat Treats",
-        image: "img/puppy.jpg",
+        image: "../img/products/WCT.avif",
         category: "Cat Treats",
         price: "64.90",
         quantity: 0
         },{
         name: "NutriMews Crunchy Dental Bites",
-        image: "img/puppy.jpg",
+        image: "../img/products/NCDB.avif",
         category: "Cat Treats",
         price: "79.99",
         quantity: 0
         },{
-        name: "Rolling Retreat Hamster Ball",
-        image: "img/puppy.jpg",
+        name: "Rolling Retreat Hamster Wheel",
+        image: "../img/products/RRHB.avif",
         category: "Hamster Toys",
         price: "69.90",
         quantity: 0
         },{
         name: "MiniMaze Adventure Playset",
-        image: "img/puppy.jpg",
+        image: "../img/products/MMAD.avif",
         category: "Hamster Toys",
         price: "84.90",
         quantity: 0
         },{
         name: "TinyTreats Hamster Delights",
-        image: "img/puppy.jpg",
+        image: "../img/products/TTHD.avif",
         category: "Hamster Treats",
         price: "49.99",
         quantity: 0
         },{
         name: "NutriNest Hamster Food Mix",
-        image: "img/puppy.jpg",
+        image: "../img/products/NNHFM.avif",
         category: "Hamster Treats",
         price: "79.90",
         quantity: 0

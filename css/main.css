@@ -187,7 +187,7 @@ rgba(0,0,0,0.25);
 
 
 
-/* --- Header ----------------------------------------------------*/
+/* --- Header --------------------------------KLAR--------------------*/
 
 header {
     background-color: #cf8f71;
@@ -224,6 +224,13 @@ header .header-container .header-img {
     background: url("../img/logo/lightTransLogo2.png") center;
 }
 
+@media (max-width: 600px) {
+    header .header-container .header-img {
+        background: url("../img/logo/darkTransLogo3.png") center;
+        background-size: 120%;
+        width: 60px;
+    }
+}
 
 
 
@@ -236,6 +243,20 @@ header .links {
 @media (max-width: 700px) {
     header .links {
         display: block;
+    }
+
+    .header-container .products::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: 70px;
+        height: 1px;
+        left: 15px;
+        background: #000;
+    }
+
+    .dark-light-active header .header-container .products::after {
+        background: #fff;
     }
 }
 
@@ -281,7 +302,17 @@ header .search {
 header .search-wrapper .search-inputs input{
     background-color: #f2e9e3;
     color: #272829;
+    font-size: 16px;
     
+}
+
+@media (max-width: 500px) {
+    header .search-wrapper .search-inputs input{
+        background-color: #f2e9e3;
+        color: #272829;
+        font-size: 12px;
+        
+    }
 }
 
 header .search-suggestions {
@@ -298,6 +329,24 @@ header .cart{
     padding: auto 0px;
     margin-right: 20px;
 } 
+
+@media (max-width: 700px) {
+    header .cart{
+        width: 40px;
+        font-size: 40px;
+        padding: auto 0px;
+        margin-right: 15px;
+    } 
+}
+
+@media (max-width: 500px) {
+    header .cart{
+        width: 30px;
+        font-size: 30px;
+        padding: auto 0px;
+        margin-right: 10px;
+    } 
+}
 
 
 
@@ -357,6 +406,7 @@ header .cart{
 
     .welcome img {
         width: 70%;
+        max-width: 435px;
         height: auto;
         padding: 10px 0;
     }
@@ -366,10 +416,11 @@ header .cart{
 
 
 
+
 /*---------- Category widgets ------------------------------------*/
 
 .carousel-inner {
-    padding: 1em;
+    padding: 20px 10vw;
 }
 
 .card {
@@ -388,7 +439,7 @@ header .cart{
     transform: translateY(-50%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
     .carousel-item {
       margin-right: 0;
       flex: 0 0 33.333333%;
