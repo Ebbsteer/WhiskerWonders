@@ -19,6 +19,12 @@ function dark() {
     }
     // prevScrollpos = currentScrollPos;
   }
+  let closeCookieBtn = document.getElementById("closeCookie");
+  closeCookieBtn.addEventListener("click", closeCookies);
+
+  function closeCookies() {
+    document.getElementById("lawmsg").classList.add("hide");
+  }
 
   (function() {
   "use strict";
