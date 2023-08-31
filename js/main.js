@@ -387,36 +387,36 @@ function addToCart(product) {
 
 
 
-  let selectedProductId = null;
+//   let selectedProductId = null;
 
 
-  function prod(productId) {
-    selectedProductId = productId;
-    console.log("hej");
-    // Update the chosen product information (image, name, price)
-    const product = products[productId - 1];
-    document.getElementById("product-image").src = product.image;
-    document.getElementById("name").textContent = product.name;
-    document.getElementById("product-price").textContent = product.price + " kr";
+//   function prod(productId) {
+//     selectedProductId = productId;
+//     console.log("hej");
+//     // Update the chosen product information (image, name, price)
+//     const product = products[productId - 1];
+//     document.getElementById("product-image").src = product.image;
+//     document.getElementById("name").textContent = product.name;
+//     document.getElementById("product-price").textContent = product.price + " kr";
 
-    // Update the "Buy" button's behavior
-    updateBuyButton();
-}
+//     // Update the "Buy" button's behavior
+//     updateBuyButton();
+// }
 
 
 
-function buySelectedProduct() {
-  console.log("hej");
+// function buySelectedProduct() {
+//   console.log("hej");
 
-  product = products[productIndex];
+//   product = products[productIndex];
     
-  product.quantity += 1;
+//   product.quantity += 1;
 
-  const updatedQuantities = products.map(product => product.quantity);
-  localStorage.setItem("quantities", JSON.stringify(updatedQuantities));  // update quantity localstorage
+//   const updatedQuantities = products.map(product => product.quantity);
+//   localStorage.setItem("quantities", JSON.stringify(updatedQuantities));  // update quantity localstorage
 
-  addLS();
+//   addLS();
 
-}
+// }
 
 
