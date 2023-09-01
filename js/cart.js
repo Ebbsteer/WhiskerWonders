@@ -162,7 +162,7 @@
 const cartItemsContainer = document.getElementById('cart-items');
 const productTemplate = document.querySelector("[data-product-template]");
 const productContainer = document.querySelector("[data-product-container]");
-const productImage = document.querySelector("[data-product-image]");
+// const productImage = document.querySelector("[data-product-image]");
 
 // Get cart items from local storage
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -179,8 +179,17 @@ cartItems.forEach(item => {
     const productBreak = document.createElement("hr");
 
     productBreak.classList.add("my-4");
+    const productImage = productList.querySelector("[data-product-image]");
     productImage.src = item.image;
-
+    const productCategory = productList.querySelector("[data-product-category]");
+    productCategory.textContent = item.category;
+    const productName = productList.querySelector("[data-product-name]");
+    productName.textContent = item.name;
+    const productQuantity = productList.querySelector("[data-product-quantity]");
+    productQuantity.value = item.quantity;
+    const productPrice = productList.querySelector("[data-product-price]");
+    productPrice.textContent = item.price + " kr";
+    
     productContainer.append(productList);
     productContainer.append(productBreak);
   }
