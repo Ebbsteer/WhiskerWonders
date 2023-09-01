@@ -551,33 +551,16 @@ header .cart{
 
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-
-}
 
 .single-product{
     margin-top: 80px;
 }
 
-.small-img-row{
-    display: flex;
-    justify-content: space-around;
-}
+
 
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
-}
-
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
-    padding-top: 4px;
 }
 
 .single-product .col-2 img {
@@ -660,50 +643,32 @@ a{
 
 
 .second{
-    padding: 2vw;
-    height: 750px;
+    font-family: "Inter", sans-serif;
     background-color: #ffe5d1;
-
-    
-}
-
-.infobar{
-    width: 30%;
-    height: 400px;
-    margin-inline: 70px;
-    margin-top: 50px;
-    background-color: #f6f3e0;
-    float: left;
-    margin-left: 100px;
-    
-}
-
-.infobar p, .infobar-that p {
-    width: 60%;
-    margin: auto;
-    margin-top: 30px;
-    font-family: "Inter", sans-serif;
-    
-
-}
-
-.infobar h4, .infobar-that h4{
-    font-family: "Inter", sans-serif;
+    padding: 20px 4vw;
+    justify-content: center;
     text-align: center;
-    margin: auto;
-    margin-top: 40px;
+}
+
+.bg-second {
+    background-color: #f6f3e0;
+}
+
+.product-info{
+    background-color: #f6f3e0;
+}
+
+.product-info p, .about p{
+    margin-top: 60px;
 
 }
 
+.product-info h4, .about h4{
+    margin-top: 60px;
+}
 
-.infobar-that{
-    width: 40%;
-    height: 600px;
-    margin-inline: 70px;
-    margin-right: 90px;
-    margin-top: 50px;
-    background-color: #f6f3e0;
-    float: right;
+
+.about{
 
 }
 

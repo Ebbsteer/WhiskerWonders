@@ -91,70 +91,14 @@
           </div>
       </header>
     
-<!-------product itself + purchase button----------->
-
-<!--
-<section class="containerpage">
-    
-    <div class="first">
-        <div class="layout">
-            
-                <img src="/img/cat.jpg" width="100%" id="imgsettingeh" id="">
-
-                <div class="small-img-group">
-                    <div class="small-img-row">
-
-                        <div class="small-img-col">
-                            <img src="/img/cat.jpg"  id="" class="small-img" width="100%"></div>
-
-                        <div class="small-img-col">
-                            <img src="/img/cat.jpg" id="" class="small-img" width="100%"></div>
-
-                        <div class="small-img-col">
-                            <img src="/img/cat.jpg" id="" class="small-img" width="100%"></div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="info-prod" id="">
-                <h1>The Cat</h1>
-                <h6></h6>
-            </div>
-
-            <div>
-                <h5></h5>
-                <input type="number" value="1">
-                <button>Add to cart</button>
-            </div>
-
-        </div>
-
-    </section>
--->
 
 <section class="first">
 <div class="small-container single-product">
-    <div class="row">
-        <div class="col-2">
+    <div class="row align-items-center">
+        <div class="col-sm-6">
             <img src="/img/cat.jpg" width="100%" id="ProductImg">
-            <div class="small-img-row">
-                <div class="small-img-col">
-                    <img src="/img/dog.jpg" width="100%" class="small-img">
-                </div>
-
-                <div class="small-img-col">
-                    <img src="/img/cat.jpg" width="100%" class="small-img">
-                </div>
-
-                <div class="small-img-col">
-                    <img src="/img/mouse.jpg" width="100%" class="small-img">
-                </div>
-
-            </div>
         </div>
-        <div class="col-2">
+        <div class="col-sm-6">
             <p> Home/ Animal</p>
             <h1> Cool Cat</h1>
             <h4>1200 kr</h4>
@@ -171,31 +115,24 @@
 </section>
 
 
-
-
-
-
 <!--w-->
 <section class="second">
-
-    <div class="infobar">
-        <div id="">
+    <div class="row bg-second">
+        <div class="col-md-6 product-info">
             <h4>The cat</h4>
-            <p>Lorem ipsum dolor sit amet. Sit mollitia tempore et velit repudiandae non sequi praesentium rerum sed voluptatem tempore in laudantium sint est labore labore. Non amet modi ea eaque repellendus eum nihil repudiandae vel porro officia quo quidem dolores At asperiores dolores.
+            <p>
+                Lorem ipsum dolor sit amet. Sit mollitia tempore et velit repudiandae non sequi praesentium rerum sed voluptatem tempore in laudantium sint est labore labore. Non amet modi ea eaque repellendus eum nihil repudiandae vel porro officia quo quidem dolores At asperiores dolores.
             </p>
-
         </div>
-    </div>
 
-    <div class="infobar-that">
-        <div class="text" id="">
+        <div class="col-md-6 about">
             <h4>lorem ipsum</h4>
-            <p>Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
+            <p>
+                Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
                 Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
                 Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
             </p>
         </div>
-
     </div>
 </div>
 
@@ -223,27 +160,7 @@
 
    <!-- img js -->
 
-   <script>
-    var ProductImg = document.getElementById("ProductImg");
-    var SmallImg = Document.getElementsByClassName("small-img");
-
-    SmallImg[0].onclick = function()
-    {
-        ProductImg.src = SmallImg[0].src;
-    }
-    SmallImg[1].onclick = function()
-    {
-        ProductImg.src = SmallImg[1].src;
-    }
-    SmallImg[2].onclick = function()
-    {
-        ProductImg.src = SmallImg[2].src;
-    }
-    SmallImg[3].onclick = function()
-    {
-        ProductImg.src = SmallImg[3].src;
-    }
-   </script>
+  
     
     <!-- JS Files -->
     <script type="text/javascript" src="../js/search.js"></script>
