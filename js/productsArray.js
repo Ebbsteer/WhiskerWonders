@@ -9,7 +9,7 @@ let products = [{
 }, {
     id: 2,
     name: "PuzzlePaws Interactive Toy",
-    link: "../html/products/PuzzlePawsInteractiveToy",
+    link: "../html/thisproduct.html?id=2",
     image: "../img/products/PIT.avif",
     category: "Dog Toys",
     price: "199.90",
@@ -17,7 +17,7 @@ let products = [{
 }, {
     id: 3,
     name: "TastyTidbits Training Treats",
-    link: "../html/products/TastyTidbitsTrainingTreats",
+    link: "../html/thisproduct.html?id=3",
     image: "../img/products/TTTT.avif",
     category: "Dog Treats",
     price: "84.99",
@@ -25,7 +25,7 @@ let products = [{
 }, {
     id: 4,
     name: "NutriChomp Dental Chews",
-    link: "../html/products/NutriChompDentalChews",
+    link: "../html/thisproduct.html?id=4",
     image: "../img/products/NDC.avif",
     category: "Dog Treats",
     price: "119.90",
@@ -33,7 +33,7 @@ let products = [{
 }, {
     id: 5,
     name: "FeatherFrenzy Interactive Wand",
-    link: "../html/products/FeatherFrenzyInteractiveWand",
+    link: "../html/thisproduct.html?id=5",
     image: "../img/products/FIW.avif",
     category: "Cat Toys",
     price: "129.95",
@@ -41,7 +41,7 @@ let products = [{
 }, {
     id: 6,
     name: "Purrfect Pouncing Plaything",
-    link: "../html/products/PurrfectPouncingPlaything",
+    link: "../html/thisproduct.html?id=6",
     image: "../img/products/PPP.avif",
     category: "Cat Toys",
     price: "99.99",
@@ -49,7 +49,7 @@ let products = [{
 }, {
     id: 7,
     name: "WhiskerWholesome Cat Treats",
-    link: "../html/products/WhiskerWholesomeCatTreats",
+    link: "../html/thisproduct.html?id=7",
     image: "../img/products/WCT.avif",
     category: "Cat Treats",
     price: "64.90",
@@ -57,7 +57,7 @@ let products = [{
 }, {
     id: 8,
     name: "NutriMews Crunchy Dental Bites",
-    link: "../html/products/NutriMewsCrunchyDentalBites",
+    link: "../html/thisproduct.html?id=8",
     image: "../img/products/NCDB.avif",
     category: "Cat Treats",
     price: "79.99",
@@ -65,7 +65,7 @@ let products = [{
 }, {
     id: 9,
     name: "Rolling Retreat Hamster Wheel",
-    link: "../html/products/RollingRetreatHamsterWheel",
+    link: "../html/thisproduct.html?id=9",
     image: "../img/products/RRHB.avif",
     category: "Hamster Toys",
     price: "69.90",
@@ -73,7 +73,7 @@ let products = [{
 }, {
     id: 10,
     name: "MiniMaze Adventure Playset",
-    link: "../html/products/MiniMazeAdventurePlayset",
+    link: "../html/thisproduct.html?id=10",
     image: "../img/products/MMAD.avif",
     category: "Hamster Toys",
     price: "84.90",
@@ -81,7 +81,7 @@ let products = [{
 }, {
     id: 11,
     name: "TinyTreats Hamster Delights",
-    link: "../html/products/TinyTreatsHamsterDelights",
+    link: "../html/thisproduct.html?id=11",
     image: "../img/products/TTHD.avif",
     category: "Hamster Treats",
     price: "49.99",
@@ -89,7 +89,7 @@ let products = [{
 }, {
     id: 12,
     name: "NutriNest Hamster Food Mix",
-    link: "../html/products/NutriNestHamsterFoodMix",
+    link: "../html/thisproduct.html?id=12",
     image: "../img/products/NNHFM.avif",
     category: "Hamster Treats",
     price: "79.90",
