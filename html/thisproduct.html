@@ -67,20 +67,25 @@
     
 <!-------product itself + purchase button----------->
 
+<!--
 <section class="containerpage">
+    
     <div class="first">
         <div class="layout">
             
-                <img src="/img/cat.jpg" id="imgsettingeh" id="">
+                <img src="/img/cat.jpg" width="100%" id="imgsettingeh" id="">
 
                 <div class="small-img-group">
-                    <div class="small-img-col">
+                    <div class="small-img-row">
 
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
+                        <div class="small-img-col">
+                            <img src="/img/cat.jpg"  id="" class="small-img" width="100%"></div>
 
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
+                        <div class="small-img-col">
+                            <img src="/img/cat.jpg" id="" class="small-img" width="100%"></div>
 
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
+                        <div class="small-img-col">
+                            <img src="/img/cat.jpg" id="" class="small-img" width="100%"></div>
 
                     </div>
 
@@ -101,6 +106,47 @@
         </div>
 
     </section>
+-->
+
+<section class="first">
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="/img/cat.jpg" width="100%" id="ProductImg">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="/img/dog.jpg" width="100%" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="/img/cat.jpg" width="100%" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="/img/mouse.jpg" width="100%" class="small-img">
+                </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <p> Home/ Animal</p>
+            <h1> Cool Cat</h1>
+            <h4>1200 kr</h4>
+            <input type="number" value="1">
+            <a href="" class="btn"> Add to cart</a>
+            <h3> Product Details <i class="fa fa-indent"></i></h3>
+            <br>
+            <p>Lorem ipsum dolor sit amet. Qui fugit asperiores qui quia quia ut laborum exercitationem ut nobis voluptatum ut commodi</p>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+
+
+
 
 
 <!--w-->
@@ -146,6 +192,32 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    
+
+
+   <!-- img js -->
+
+   <script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = Document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function()
+    {
+        ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function()
+    {
+        ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function()
+    {
+        ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function()
+    {
+        ProductImg.src = SmallImg[3].src;
+    }
+   </script>
     
     <!-- JS Files -->
     <script type="text/javascript" src="../js/search.js"></script>
