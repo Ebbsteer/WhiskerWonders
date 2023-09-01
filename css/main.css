@@ -541,18 +541,7 @@ header .cart{
 .containerpage button :hover{
     cursor: pointer;
 }
-/*-------Singular product page-----------------------
 
-.containerpage{
-    padding: 2vw;
-     background-color: #fff1da;
-
-}
-
-.first{
-    height: 600px;
-}
----*/
 
 .small-container{
     max-width: 800px;
@@ -667,7 +656,7 @@ a{
 
 
 
-
+/*-----------information section of singular product page-----------*/
 
 
 .second{
@@ -694,6 +683,7 @@ a{
     margin: auto;
     margin-top: 30px;
     font-family: "Inter", sans-serif;
+    
 
 }
 
@@ -716,44 +706,6 @@ a{
     float: right;
 
 }
-
-
-
-/*-------Singular product page - images-----------------------*/
-
-/*
-.layout{
-margin-top: 50px;
-}
-
-#imgsettingeh {
-    width: 25%;
-    margin-left: -350px;
-}
-
-.small-img-group{
-    display: flex;
-    float:left ;
-    margin-left: 50px;
-    
-}
-
-.small-img-row{
-  
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-}
-
-.small-img{
-    width: 30%;
-    margin-bottom: 7px;
-}*/
-
-
-
-
-
 
 
 /* --- Footer ----------------------------------------------------*/

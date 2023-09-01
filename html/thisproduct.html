@@ -25,45 +25,71 @@
   </head>
   <body>
 
-    <!-- Dark/Light mode -->
-    <button  class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
+      <!-- Dark/Light mode -->
+      <button  class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
     
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-img"></div>
-
-            <div class="search">
-              <div class="search-wrapper">
-                <div class="search-inputs">
-                    <label for="search">Search Users</label>
-                    <input type="search" class="form-control" name="search" id="search" data-search>
-                </div>
-                <div class="search-suggestions mt-3 hs-menu-inner" data-user-cards-container>
-                    <template class="search-suggestion" data-user-cards-template>
-                        <div class="card hide dropdown-item">
-                            <div class="row no-gutters">
-                                <div class="col-md-3 col-12">
-                                    <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="card-body">
-                                        <h3 class="card-title" data-header></h3>
-                                        <p class="card-text" data-body></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                                    <p class="search-price" data-price></p>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-            </div>
-            </div>
-
-        </div>
-    </header>
+      <!-- Header -->
+      <header>
+          <div class="header-container">
+  
+              <a href="index.html"><div class="header-img"></div></a>
+  
+              <div class="links">
+                  <div class="products">
+                      <a href="productPage.html" class="products">
+                          Products
+                      </a>
+                  </div>
+  
+                  <div class="contact">
+                      <a href="contact.html" class="contact">
+                          Contact
+                      </a>
+                  </div>
+              </div>
+  
+              <div class="search">
+                  <div class="search-wrapper">
+  
+                      <div class="search-inputs">
+                          <input type="search" class="form-control" placeholder="ex. dog, candy, ..." name="search" id="search" data-search>
+                      </div>
+  
+                      <div class="search-suggestions hs-menu-inner" data-user-cards-container>
+                          <template class="search-suggestion" data-user-cards-template>
+                              <div class="card hide dropdown-item">
+                                  <div class="row no-gutters">
+  
+                                      <div class="col-md-3 col-12">
+                                          <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
+                                      </div>
+  
+                                      <div class="col-md-6 col-12">
+                                          <div class="card-body">
+                                              <h3 class="card-title" data-header></h3>
+                                              <p class="card-text" data-body></p>
+                                          </div>
+                                      </div>
+  
+                                      <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
+                                          <p class="search-price" data-price></p>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                          </template>
+                      </div>
+                  </div>
+              </div>
+  
+              <a href="/cart.html">
+                  <div class="cart">
+                      <i class="bx bx-cart"></i>
+                  </div>
+              </a>
+  
+          </div>
+      </header>
     
 <!-------product itself + purchase button----------->
 
