@@ -347,6 +347,11 @@ header .cart{
 
 }    
 
+ .product-list{
+
+    margin-bottom: 5%;
+}
+
 .product img {
     
     height: auto;
