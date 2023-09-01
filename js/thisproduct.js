@@ -19,7 +19,7 @@ addEventListener('load', () => {
             // Assign values to your HTML elements here
             productName.textContent = product.name;
             productImage.src = product.image;
-            productPrice.textContent = product.price;
+            productPrice.textContent = product.price + " kr";
             productQuantity.textContent = product.quantity;
         }
     });
