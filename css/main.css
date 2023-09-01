@@ -545,7 +545,7 @@ header .cart{
 .containerpage button :hover{
     cursor: pointer;
 }
-/*-------Singular product page-----------------------*/
+/*-------Singular product page-----------------------
 
 .containerpage{
     padding: 2vw;
@@ -556,6 +556,122 @@ header .cart{
 .first{
     height: 600px;
 }
+---*/
+
+.small-container{
+    max-width: 800px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+
+.single-product{
+    margin-top: 80px;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+.single-product .col-2 img {
+    padding: 0;
+}
+
+.single-product .col-2{
+    padding: 20px;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #332419;
+}
+
+input:focus {
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #332419;
+}
+
+.single-product .fa{
+    color: #dea49d;
+    margin-left: 10px;
+}
+
+.btn{
+    display: inline-block;
+    background: #e6998f;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #bd8d8d;
+
+}
+
+
+
+
+
+
+
+
 
 
 .second{
@@ -565,9 +681,6 @@ header .cart{
 
     
 }
-
-
-
 
 .infobar{
     width: 30%;
@@ -612,6 +725,7 @@ header .cart{
 
 /*-------Singular product page - images-----------------------*/
 
+/*
 .layout{
 margin-top: 50px;
 }
@@ -628,15 +742,23 @@ margin-top: 50px;
     
 }
 
-.small-img-col{
+.small-img-row{
   
     cursor: pointer;
+    display: flex;
+    justify-content: space-around;
 }
 
 .small-img{
     width: 30%;
     margin-bottom: 7px;
-}
+}*/
+
+
+
+
+
+
 
 /* --- Footer ----------------------------------------------------*/
 
