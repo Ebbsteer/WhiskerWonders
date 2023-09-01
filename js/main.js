@@ -296,7 +296,7 @@ function dark() {
 
 
   const boxElements = []; // Array to hold cloned card elements
-  const productListContainer = document.getElementById('product-list');
+  // const productListContainer = document.getElementById('product-list');
 
 
   addEventListener('load', () => 
@@ -318,6 +318,8 @@ function dark() {
     //     boxElements.push({ name: product.name, category: product.category, price: product.price,
     //        quantity: product.quantity, element: box });
     // }); 
+    const productListContainer = document.getElementById('product-list');
+
     products.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.classList.add('product');
