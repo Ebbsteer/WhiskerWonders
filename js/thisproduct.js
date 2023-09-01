@@ -2,7 +2,8 @@
 const productName = document.getElementById("thisProductName");
 const productImage = document.getElementById("thisProductImage");
 const productPrice = document.getElementById("thisProductPrice");
-const productQuantity = document.getElementById("thisProductQuantity");    
+const productQuantity = document.getElementById("thisProductQuantity");
+const productDescription = document.getElementById("thisProductDescription");    
 
 const param = (new URLSearchParams(window.location.search)).get('id'); // Assuming 'id' is the query parameter name.
     
@@ -15,6 +16,7 @@ addEventListener('load', () => {
             productImage.src = product.image;
             productPrice.textContent = product.price + " kr";
             productQuantity.textContent = product.quantity;
+            productDescription.textContent = product.description;
         }
     });
 });
