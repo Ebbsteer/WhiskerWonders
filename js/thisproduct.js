@@ -38,9 +38,14 @@ addEventListener('load', () => {
               existingItem.quantity = parseInt(existingItem.quantity) + parseInt(productAddVar);
             } else {
               cartItems.push({
+                id: product.id,
                 name: product.name,
+                link: product.link,
+                image: product.image,
+                category: product.category,
                 price: product.price,
                 quantity: 1,
+                description: product.description,
               });
             }
 
