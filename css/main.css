@@ -401,9 +401,14 @@ header .cart{
     margin: auto;
     padding-left: 25px;
     padding-right: 20px;
+    
 
 }
 
+.first{
+    padding-bottom: 50px;
+    margin-top: -50px;
+}
 
 .single-product{
     margin-top: 80px;
@@ -420,6 +425,7 @@ header .cart{
 
 .single-product .thisproduct-image{
     padding: 20px;
+    
 }
 
 .thisproduct-image{
@@ -795,12 +801,11 @@ rgba(0,0,0,0.25);
 
 .product-info{
     background-color: #f6f3e0;
-    border: 1px solid black;
 }
 
 .about{
     background-color: #f6f3e0;
-    border: 1px solid black;
+  
 }
 
 .product-info h4, .about h4{
