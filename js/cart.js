@@ -159,7 +159,7 @@
   //   document.getElementById("sum").innerHTML = "Total: " + total;    // count price total and update total
   // }
   
-  const cartItemsContainer = document.getElementById('cart-items');
+const cartItemsContainer = document.getElementById('cart-items');
 
 // Get cart items from local storage
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
