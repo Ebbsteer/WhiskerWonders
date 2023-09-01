@@ -17,6 +17,7 @@ addEventListener('load', () => {
             productPrice.textContent = product.price + " kr";
             productQuantity.textContent = product.quantity;
             productDescription.textContent = product.description;
+            productQuantity.onclick = addToCart();
         }
     });
 });
