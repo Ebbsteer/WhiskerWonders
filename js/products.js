@@ -58,7 +58,7 @@ function displayProducts(products) {
             productLink.href = product.link;
       
             const productPrice = document.createElement('p');
-            productPrice.textContent = `$${product.price}`;
+            productPrice.textContent = `${product.price} kr`;
 
             const addToCartButton = document.createElement('button');
             addToCartButton.classList.add('add-to-cart');
@@ -109,9 +109,14 @@ function addToCart(product) {
         existingItem.quantity++;
     } else {
         cartItems.push({
-            name: productName,
-            price: productPrice,
-            quantity: 1
+          id: product.id,
+          name: product.name,
+          link: product.link,
+          image: product.image,
+          category: product.category,
+          price: product.price,
+          quantity: 1,
+          description: product.description,
         });
     }
 

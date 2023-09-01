@@ -162,14 +162,22 @@
 const cartItemsContainer = document.getElementById('cart-items');
 const productTemplate = document.querySelector("[data-product-template]");
 const productContainer = document.querySelector("[data-product-container]");
-const productImage = document.querySelector("[data-product-image]");
+// const productImage = document.querySelector("[data-product-image]");
 
 // Get cart items from local storage
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 // Display cart items with quantities greater than 0
 addEventListener("load", (event) => {
-cartItems.forEach(item => {
+  const productManyItems = document.querySelector("[data-product-manyItems]");
+  productManyItems.textContent = cartItems.length + " items";
+  const productSummaryCount = document.querySelector("[data-product-summary-count]");
+  productSummaryCount.textContent = "Items: " + cartItems.length;
+  const productSummaryPrice = document.querySelector("[data-product-summary-price]");
+  const productSummaryTotal = document.querySelector("[data-product-summary-total]");
+  let priceSummary = 0;
+    
+  cartItems.forEach(item => {
   if (item.quantity > 0) {
     // const cartItemDiv = document.createElement('div');
     // cartItemDiv.classList.add('cart-item');
@@ -179,13 +187,28 @@ cartItems.forEach(item => {
     const productBreak = document.createElement("hr");
 
     productBreak.classList.add("my-4");
-    productImage.src = item.img;
-
+    
+    const productImage = productList.querySelector("[data-product-image]");
+    productImage.src = item.image;
+    const productCategory = productList.querySelector("[data-product-category]");
+    productCategory.textContent = item.category;
+    const productName = productList.querySelector("[data-product-name]");
+    productName.textContent = item.name;
+    const productQuantity = productList.querySelector("[data-product-quantity]");
+    productQuantity.value = item.quantity;
+    const productPrice = productList.querySelector("[data-product-price]");
+    productPrice.textContent = item.price + " kr";
+    
     productContainer.append(productList);
     productContainer.append(productBreak);
+    priceSummary = (priceSummary += (item.price * item.quantity));
   }
   console.log("Loaded");
-})});
+})
+  productSummaryPrice.textContent = priceSummary + " kr";
+  let priceTotal = (parseFloat(priceSummary) + 50);
+  productSummaryTotal.textContent = priceTotal + " kr";
+});
   //   const itemName = document.createElement('h3');
   //   itemName.textContent = item.name;
 
