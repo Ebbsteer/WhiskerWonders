@@ -114,7 +114,7 @@
                 <div class="p-5" id="thingsContainer">
                   <div class="d-flex justify-content-between align-items-center mb-5">
                     <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
-                    <h6 class="mb-0 text-muted">3 items</h6>
+                    <h6 class="mb-0 text-muted" data-product-manyItems>3 items</h6>
                   </div>
                   <div data-product-container>
                   <hr class="my-4">
@@ -124,8 +124,8 @@
                         <img src="" class="img-fluid rounded-3" id="productImg" alt="Picture of product" data-product-image>
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="text-muted" data-product-category>Shirt</h6>
-                        <h6 class="text-black mb-0" data-product-name>Cotton T-shirt</h6>
+                        <h6 class="text-muted" data-product-category></h6>
+                        <h6 class="text-black mb-0" data-product-name></h6>
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                         <button class="btn btn-link px-2"
@@ -142,7 +142,7 @@
                         </button>
                       </div>
                       <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <h6 class="mb-0" data-product-price>€ 44.00</h6>
+                        <h6 class="mb-0" data-product-price></h6>
                       </div>
                       <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                         <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
@@ -162,8 +162,8 @@
                   <hr class="my-4">
 
                   <div class="d-flex justify-content-between mb-4">
-                    <h5 class="text-uppercase">items 3</h5>
-                    <h5>€ 132.00</h5>
+                    <h5 class="text-uppercase" data-product-summary-count>items 3</h5>
+                    <h5 data-product-summary-price>€ 132.00</h5>
                   </div>
 
                   <h5 class="text-uppercase mb-3">Shipping</h5>
@@ -190,7 +190,7 @@
 
                   <div class="d-flex justify-content-between mb-5">
                     <h5 class="text-uppercase">Total price</h5>
-                    <h5>€ 137.00</h5>
+                    <h5 data-product-summary-total>€ 137.00</h5>
                   </div>
 
                   <button type="button" class="btn btn-dark btn-block btn-lg"

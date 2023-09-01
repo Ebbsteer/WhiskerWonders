@@ -51,7 +51,7 @@ function displayProducts(products) {
             productLink.href = product.link;
       
             const productPrice = document.createElement('p');
-            productPrice.textContent = `$${product.price}`;
+            productPrice.textContent = `${product.price} kr`;
 
             const addToCartButton = document.createElement('button');
             addToCartButton.classList.add('add-to-cart');
