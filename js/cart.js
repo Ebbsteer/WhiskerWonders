@@ -171,6 +171,7 @@ cartItems.forEach(item => {
     const cartItemDiv = document.createElement('div');
     cartItemDiv.classList.add('cart-item');
     cartItemDiv.textContent = item.name;
+    cartItemsContainer.appendChild(cartItemDiv);
   }
   console.log("Loaded");
 })});
