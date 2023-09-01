@@ -264,6 +264,7 @@ header .search {
     flex: 4;
 }
 
+
 @media (min-width: 900px) {
     header .search {
         margin: auto 4vw;
@@ -271,11 +272,17 @@ header .search {
     }
 }
 
-header .search-wrapper .search-inputs input{
+header .search-wrapper .search-inputs input {
     background-color: #f2e9e3;
     color: #272829;
     font-size: 16px;
     
+}
+
+header .search-wrapper .search-inputs .form-control:focus {
+    position: relative;
+    display: block;
+    top: 0px;
 }
 
 @media (max-width: 500px) {
@@ -287,8 +294,12 @@ header .search-wrapper .search-inputs input{
     }
 }
 
-header .search-suggestions {
+header .search-wrapper .search-suggestions {
+    position: absolute;
+    display: block;
+    top: 90px;
     z-index: 999;
+    width: 90%;
 }
 
 
