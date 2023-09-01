@@ -419,6 +419,11 @@ header .cart{
 
 /*---------- Category widgets ------------------------------------*/
 
+.carousel {
+    margin: 40px 0;
+    text-align: center;
+}
+
 .carousel-inner {
     padding: 20px 10vw;
 }
@@ -437,10 +442,6 @@ header .cart{
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.carousel-item h4{
-    text-align: center;
 }
 
 @media (min-width: 668px) {
