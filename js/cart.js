@@ -179,7 +179,7 @@ cartItems.forEach(item => {
     const productBreak = document.createElement("hr");
 
     productBreak.classList.add("my-4");
-    productImage.src = item.img;
+    productImage.src = item.image;
 
     productContainer.append(productList);
     productContainer.append(productBreak);
