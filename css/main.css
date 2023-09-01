@@ -43,13 +43,6 @@ h5,
   font-weight: 600;
 }
 
-.img-fluid {
-    width: 100%;
-    height: auto;
-}
-
-
-
 /* --- Toggle dark/light mode ----------------KLAR--------------------*/
 
 .dark-light-toggle {
@@ -181,6 +174,7 @@ header .header-container {
 
 
 
+
 /* Image */
 
 header .header-container .header-img {
@@ -300,6 +294,8 @@ header .search-wrapper .search-suggestions {
     top: 90px;
     z-index: 999;
     width: 90%;
+    margin: 0px;
+    padding: 0px;
 }
 
 
