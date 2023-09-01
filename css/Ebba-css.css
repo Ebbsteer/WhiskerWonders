@@ -1,0 +1,129 @@
+
+/* --- Welcome ---------------------------OK------------------------*/
+
+.welcome {
+    background-color: #f2e9e3;
+    height: fit-content;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.dark-light-active .welcome {
+    background-color: #332419;
+}
+
+.welcome h1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 0px 5vw;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.welcome h6 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 0px 1vw 20px 5vw;
+    
+    letter-spacing: 1px;
+}
+
+.welcome p {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 1vw 20px 5vw;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px 5vw 20px 1vw;
+}
+
+@media (max-width: 575px) {
+
+    .welcome p {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .welcome img {
+        width: 70%;
+        max-width: 435px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+
+}
+
+
+
+
+/*---------- Category widgets ------------------------------------*/
+
+.carousel {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.carousel-inner {
+    padding: 20px 10vw;
+}
+
+.carousel-item a:hover {
+    color: pink;
+
+}
+
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 668px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+}
+
+.card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.card img {
+      max-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+}
+

@@ -1,0 +1,51 @@
+
+/* -------- Scroll bar custom -----------------KLAR-------------------*/
+
+#data{
+	float: left;
+	width: 50%;
+	margin-left: 50px;
+	margin-right: 26px;
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #a17867;
+	border-radius: 5px;
+box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px -2px 
+rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-track{
+	background: linear-gradient(to right, #0c0b0e, #201c29 1px, #100e17 1px,
+		#100e17);
+}
+
+
+
+/*-----------information section of singular product page-----------*/
+
+
+.second{
+    font-family: "Inter", sans-serif;
+    background-color: #ffe5d1;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.product-info{
+    background-color: #f6f3e0;
+    border: 1px solid black;
+}
+
+.about{
+    background-color: #f6f3e0;
+    border: 1px solid black;
+}
+
+.product-info h4, .about h4{
+    margin: 50px 0;
+}
