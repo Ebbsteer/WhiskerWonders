@@ -616,12 +616,12 @@ input:focus {
     outline: none;
 }
 
-a{
+/* a{
     text-decoration: none;
     color: #332419;
-}
+} */
 
-.single-product .fa{
+.single-product .fa-indent{
     color: #dea49d;
     margin-left: 10px;
 }
