@@ -6,7 +6,7 @@ let products = [{
 
     id: 1,
     name: "Bounce & Fetch Buddy",
-    link: "../html/products/Bounce&FetchBuddy",
+    link: "../html/thisproduct.html?id=1",
     image: "../img/products/B&FB.avif",
     category: "Dog Toys",
     price: "149.95",
