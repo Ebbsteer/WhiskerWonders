@@ -29,10 +29,14 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
         displayProducts(filteredProducts);
     }
 });
+let productNumb = 0;
+const outputElement = document.getElementById("prodnumber");
+
+
 
 function displayProducts(products) {
     const productList = document.querySelectorAll('.product-list');
-
+  
     // Clear the existing product lists
     productList.forEach(list => {
         list.innerHTML = '';
@@ -41,6 +45,9 @@ function displayProducts(products) {
     // Create and append product elements to each list
     productList.forEach(list => {
         products.forEach(product => {
+          
+          productNumb++;
+          
             const productDiv = document.createElement('div');
             productDiv.className = 'product';
 
@@ -74,10 +81,19 @@ function displayProducts(products) {
 
             addToCartButton.addEventListener('click', () => {
                 addToCart(product);
+                
+               
             });
         });
     });
+   
+
+    outputElement.textContent = productNumb + " / 12"  ;
 }
+
+
+console.log(productNumb);
+
 
 function addToCart(product) {
     const productName = product.name;
