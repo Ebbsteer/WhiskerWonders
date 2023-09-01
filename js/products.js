@@ -27,6 +27,8 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
     //     boxElements.push({ name: product.name, category: product.category, price: product.price,
     //        quantity: product.quantity, element: box });
     // }); 
+
+    console.log(window.location.search)
     const productListContainer = document.getElementById('product-list');
 
     products.forEach(product => {
@@ -36,7 +38,10 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
       const productImage = document.createElement('img');
       productImage.src = product.image;
       productImage.alt = product.name;
-    
+      
+      const productLink = document.createElement('a');
+      productLink.href = product.link;
+
       const productName = document.createElement('h2');
       productName.textContent = product.name;
     
@@ -50,7 +55,8 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
       addToCartButton.setAttribute('data-price', product.price);
     
       productDiv.appendChild(productImage);
-      productDiv.appendChild(productName);
+      productDiv.appendChild(productLink);
+      productLink.appendChild(productName);
       productDiv.appendChild(productPrice);
       productDiv.appendChild(addToCartButton);
     
