@@ -1,19 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- Boxicons File -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Inter:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Inter:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
     <!-- Main CSS File -->
     <link href="../css/main.css" rel="stylesheet">
 
@@ -22,136 +29,185 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/logo/favicon.png">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Dark/Light mode -->
-    <button  class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
-    
+    <button class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
+
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-img"></div>
+        <div class="header-container">
+
+            <a href="index.html">
+                <div class="header-img"></div>
+            </a>
+
+            <div class="links">
+                <div class="products">
+                    <a href="productPage.html" class="products">
+                        Products
+                    </a>
+                </div>
+
+                <div class="contact">
+                    <a href="contact.html" class="contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
 
             <div class="search">
-              <div class="search-wrapper">
-                <div class="search-inputs">
-                    <label for="search">Search Users</label>
-                    <input type="search" class="form-control" name="search" id="search" data-search>
-                </div>
-                <div class="search-suggestions mt-3 hs-menu-inner" data-user-cards-container>
-                    <template class="search-suggestion" data-user-cards-template>
-                        <div class="card hide dropdown-item">
-                            <div class="row no-gutters">
-                                <div class="col-md-3 col-12">
-                                    <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="card-body">
-                                        <h3 class="card-title" data-header></h3>
-                                        <p class="card-text" data-body></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                                    <p class="search-price" data-price></p>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-            </div>
-            </div>
+                <div class="search-wrapper">
 
-        </div>
-    </header>
-    
-<!-------product itself + purchase button----------->
-
-<section class="containerpage">
-    <div class="first">
-        <div class="layout">
-            
-                <img src="/img/cat.jpg" id="imgsettingeh" id="">
-
-                <div class="small-img-group">
-                    <div class="small-img-col">
-
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
-
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
-
-                        <div><img src="/img/cat.jpg" class="small-img" id=""></div>
-
+                    <div class="search-inputs">
+                        <input type="search" class="form-control" placeholder="ex. dog, candy, ..." name="search"
+                            id="search" data-search>
                     </div>
 
+                    <div class="search-suggestions hs-menu-inner" data-user-cards-container>
+                        <template class="search-suggestion" data-user-cards-template>
+                            <div class="card hide dropdown-item">
+                                <div class="row no-gutters">
+
+                                    <div class="col-md-3 col-12">
+                                        <img src="" alt="picture of image" class="card-img img-fluid p-3 border"
+                                            data-image>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="card-body">
+                                            <h3 class="card-title" data-header></h3>
+                                            <p class="card-text" data-body></p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0">
+                                        <!-- Added responsive padding classes -->
+                                        <p class="search-price" data-price></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </template>
+                    </div>
                 </div>
             </div>
 
-            <div class="info-prod" id="">
-                <h1>The Cat</h1>
-                <h6></h6>
-            </div>
+            <a href="/cart.html">
+                <div class="cart">
+                    <i class="bx bx-cart"></i>
+                </div>
+            </a>
 
-            <div>
-                <h5></h5>
-                <input type="number" value="1">
-                <button>Add to cart</button>
-            </div>
 
+<section class="first">
+<div class="small-container single-product">
+    <div class="row align-items-center">
+    </header>
+
+
+    <section class="first">
+        <div class="small-container single-product">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <img src="" width="100%" id="thisProductImage">
+                </div>
+                <div class="col-sm-6">
+                    <p> Home/ Animal</p>
+
+                    <h1 id="thisProductName"> Cool Cat</h1>
+
+                    <h4 id="thisProductPrice">1200 kr</h4>
+
+                    <input type="number" value="1" id="thisProductQuantity">
+
+                    <a href="" class="btn" id="thisProductName">
+                        Add to cart
+                    </a>
+
+                    <h3> Product Details <i class="fa fa-indent"></i></h3>
+
+                    <br>
+
+                    <p id="thisProductDescription">
+                        Lorem ipsum dolor sit amet. Qui fugit asperiores qui quia quia ut
+                        laborum exercitationem ut nobis voluptatum ut commodi
+                    </p>
+                </div>
+            </div>
         </div>
+
 
     </section>
 
 
-<!--w-->
-<section class="second">
+    <!--w-->
+    <section class="container-fluid second">
+        <div class="row gx-0 gy-4">
+            <div class="col-md-6 px-5 product-info">
+                <h4>The cat</h4>
+                <p>
+                    Lorem ipsum dolor sit amet. Sit mollitia tempore et velit repudiandae non sequi praesentium rerum
+                    sed voluptatem tempore in laudantium sint est labore labore. Non amet modi ea eaque repellendus eum
+                    nihil repudiandae vel porro officia quo quidem dolores At asperiores dolores.
+                </p>
+            </div>
 
-    <div class="infobar">
-        <div id="">
-            <h4>The cat</h4>
-            <p>Lorem ipsum dolor sit amet. Sit mollitia tempore et velit repudiandae non sequi praesentium rerum sed voluptatem tempore in laudantium sint est labore labore. Non amet modi ea eaque repellendus eum nihil repudiandae vel porro officia quo quidem dolores At asperiores dolores.
-            </p>
-
+            <div class="col-md-6 px-5 about">
+                <h4>lorem ipsum</h4>
+                <p>
+                    Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias
+                    praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic
+                    voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
+                    Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias
+                    praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic
+                    voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
+                    Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias
+                    praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic
+                    voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
+                </p>
+            </div>
         </div>
-    </div>
-
-    <div class="infobar-that">
-        <div class="text" id="">
-            <h4>lorem ipsum</h4>
-            <p>Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
-                Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
-                Lorem ipsum dolor sit amet. Est eveniet iure non repellendus suscipit in soluta optio. Et alias praesentium nam quidem ipsum sit dignissimos maiores vel nobis omnis! Eos corrupti optio hic voluptatum veniam est voluptatem cumque eum sint earum in quaerat nulla.
-            </p>
         </div>
+    </section>
 
-    </div>
-</div>
-
-
-</section>
-
-
-
-    <footer> 
+    <footer>
         <div class="d-flex align-items-center justify-content-center">
-          <div class="footer-img"></div>
+            <div class="footer-img"></div>
 
-          <div class="copyright">
-            &copy; Copyright <strong><span>Whisker Wonders</span></strong>
-          </div>
-        </div>   
+            <div class="copyright">
+                &copy; Copyright <strong><span>Whisker Wonders</span></strong>
+            </div>
+        </div>
     </footer>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow-alt'></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class='bx bx-up-arrow-alt'></i></a>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- img js -->
+
+
+
     <!-- JS Files -->
+    <script type="text/javascript" src="../js/productsArray.js"></script>
     <script type="text/javascript" src="../js/search.js"></script>
     <script type="text/javascript" src="../js/cookies.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/cart.js"></script>
+    <script type="text/javascript" src="../js//thisproduct.js"></script>
+    <!-- <script type="text/javascript" src="../js/cart.js"></script> -->
 
-  </body>
+</body>
+
 </html>

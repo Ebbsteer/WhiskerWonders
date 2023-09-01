@@ -419,8 +419,18 @@ header .cart{
 
 /*---------- Category widgets ------------------------------------*/
 
+.carousel {
+    margin: 40px 0;
+    text-align: center;
+}
+
 .carousel-inner {
     padding: 20px 10vw;
+}
+
+.carousel-item a:hover {
+    color: pink;
+
 }
 
 .card {
@@ -472,7 +482,7 @@ header .cart{
 
 /*---------- Product List-----------------------------*/
 
-.col-md-4{
+.row_product_col_md_4{
     margin-bottom: 30px;
 }
 
@@ -515,7 +525,8 @@ header .cart{
 }    
 
 .productPage img{
-    max-width: 60%;
+    max-width: 40%;
+    min-width: 30%;
     margin-top: 30px;
 }    
 
@@ -541,98 +552,126 @@ header .cart{
 .containerpage button :hover{
     cursor: pointer;
 }
-/*-------Singular product page-----------------------*/
 
-.containerpage{
-    padding: 2vw;
-     background-color: #fff1da;
+/*--------------------------------*/
+.small-container{
+    max-width: 800px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 20px;
 
 }
 
-.first{
-    height: 600px;
+
+.single-product{
+    margin-top: 80px;
 }
+
+.thisproduct-image img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.single-product .thisproduct-image img {
+    padding: 0;
+}
+
+.single-product .thisproduct-image{
+    padding: 20px;
+}
+
+.thisproduct-image{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+}
+
+.thisproduct-image h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    border: 1px solid #332419;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* a{
+    text-decoration: none;
+    color: #332419;
+} */
+
+.single-product .fa-indent{
+    color: #dea49d;
+    margin-left: 10px;
+}
+
+.btn{
+    display: inline-block;
+    background: #e6998f;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #bd8d8d;
+
+}
+
+
+
+
+
+
+
+/*-----------information section of singular product page-----------*/
 
 
 .second{
-    padding: 2vw;
-    height: 750px;
+    font-family: "Inter", sans-serif;
     background-color: #ffe5d1;
-
-    
-}
-
-
-
-
-.infobar{
-    width: 30%;
-    height: 400px;
-    margin-inline: 70px;
-    margin-top: 50px;
-    background-color: #f6f3e0;
-    float: left;
-    margin-left: 100px;
-    
-}
-
-.infobar p, .infobar-that p {
-    width: 60%;
-    margin: auto;
-    margin-top: 30px;
-    font-family: "Inter", sans-serif;
-
-}
-
-.infobar h4, .infobar-that h4{
-    font-family: "Inter", sans-serif;
+    padding: 30px 0;
     text-align: center;
-    margin: auto;
-    margin-top: 40px;
-
 }
 
-
-.infobar-that{
-    width: 40%;
-    height: 600px;
-    margin-inline: 70px;
-    margin-right: 90px;
-    margin-top: 50px;
+.product-info{
     background-color: #f6f3e0;
-    float: right;
-
+    border: 1px solid black;
 }
 
-
-
-/*-------Singular product page - images-----------------------*/
-
-.layout{
-margin-top: 50px;
+.about{
+    background-color: #f6f3e0;
+    border: 1px solid black;
 }
 
-#imgsettingeh {
-    width: 25%;
-    margin-left: -350px;
+.product-info h4, .about h4{
+    margin: 50px 0;
 }
 
-.small-img-group{
-    display: flex;
-    float:left ;
-    margin-left: 50px;
-    
-}
-
-.small-img-col{
-  
-    cursor: pointer;
-}
-
-.small-img{
-    width: 30%;
-    margin-bottom: 7px;
-}
 
 /* --- Footer ----------------------------------------------------*/
 
@@ -647,16 +686,78 @@ footer {
     background-color: #9e704d;
 }    
 
+footer .footer-image::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: #000;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.dark-light-active footer .footer-image::after {
+    background: #fff;
+}
+
 footer .footer-img {
     background: url("../img/logo/darkTransLogo.png") center;
-    width: 450px;
-    height: 100px;
+    width: 410px;
+    height: 90px;
     background-repeat: no-repeat;
+    margin: auto;
 }    
 
-.dark-light-active footer .footer-img {
+.dark-light-active footer .footer-container .footer-img {
     background: url("../img/logo/lightTransLogo.png") center;
-}    
+}   
+
+@media (max-width: 700px) {
+    footer .footer-img {
+        background-size: 90%;
+        height: 80px;
+    }    
+
+    footer .footer-image::after {
+        height: 2px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    footer .footer-img {
+        background-size: 80%;
+        height: 80px;
+    }    
+
+    footer .footer-image::after {
+        height: 2px;
+    }
+}
+
+@media (max-width: 410px) {
+    footer .footer-img {
+        width: 300px;
+        background-size: 100%;
+    }    
+
+    footer .footer-image::after {
+        height: 1px;
+    }
+}
+
+@media (max-width: 320px) {
+    footer .footer-img {
+        width: 250px;
+        background-size: 100%;
+        height: 60px;
+    }    
+
+    footer .footer-image::after {
+        height: 1px;
+    }
+}
 
 /* --- Cookies ---------------------------------------------------*/
 

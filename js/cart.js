@@ -159,18 +159,22 @@
   //   document.getElementById("sum").innerHTML = "Total: " + total;    // count price total and update total
   // }
   
-  const cartItemsContainer = document.getElementById('cart-items');
+const cartItemsContainer = document.getElementById('cart-items');
 
 // Get cart items from local storage
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 // Display cart items with quantities greater than 0
+addEventListener("load", (event) => {
 cartItems.forEach(item => {
   if (item.quantity > 0) {
     const cartItemDiv = document.createElement('div');
     cartItemDiv.classList.add('cart-item');
     cartItemDiv.textContent = item.name;
-
+    cartItemsContainer.appendChild(cartItemDiv);
+  }
+  console.log("Loaded");
+})});
   //   const itemName = document.createElement('h3');
   //   itemName.textContent = item.name;
 
@@ -206,7 +210,6 @@ cartItems.forEach(item => {
 
   //   cartItemsContainer.appendChild(cartItemDiv);
   // }
-}});
 
 function updateLocalStorage() {
   localStorage.setItem('cartItems', JSON.stringify(cartItems));

@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- Boxicons File -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Inter:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Inter:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
     <!-- Main CSS File -->
     <link href="../css/main.css" rel="stylesheet">
 
@@ -22,125 +26,131 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/logo/favicon.png">
 
-  </head>
-  <body>
-
-    <!-- Dark/Light mode -->
-    <button  class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
-    
-  
-
-  <script type="text/javascript" src="../js/search.js"></script>
-  <script type="text/javascript" src="../js/cookies.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
-  <script type="text/javascript" src="../js/cart.js"></script>
-
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="header-container">
+    <!-- Dark/Light mode -->
+    <button class="bx bx-sun dark-light-toggle" onclick="dark()"></button>
 
-        <a href="index.html"><div class="header-img"></div></a>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
 
-        <div class="links">
-            <div class="products">
-                <a href="productPage.html" class="products">
-                    Products
-                </a>
-            </div>
+            <a href="index.html">
+                <div class="header-img"></div>
+            </a>
 
-            <div class="contact">
-                <a href="contact.html" class="contact">
-                    Contact
-                </a>
-            </div>
-        </div>
-
-        <div class="search">
-            <div class="search-wrapper">
-
-                <div class="search-inputs">
-                    <input type="search" class="form-control" placeholder="ex. dog, candy, ..." name="search" id="search" data-search>
+            <div class="links">
+                <div class="products">
+                    <a href="productPage.html" class="products">
+                        Products
+                    </a>
                 </div>
 
-                <div class="search-suggestions hs-menu-inner" data-user-cards-container>
-                    <template class="search-suggestion" data-user-cards-template>
-                        <div class="card hide dropdown-item">
-                            <div class="row no-gutters">
+                <div class="contact">
+                    <a href="contact.html" class="contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
 
-                                <div class="col-md-3 col-12">
-                                    <img src="" alt="picture of image" class="card-img img-fluid p-3 border" data-image>
-                                </div>
+            <div class="search">
+                <div class="search-wrapper">
 
-                                <div class="col-md-6 col-12">
-                                    <div class="card-body">
-                                        <h3 class="card-title" data-header></h3>
-                                        <p class="card-text" data-body></p>
+                    <div class="search-inputs">
+                        <input type="search" class="form-control" placeholder="ex. dog, candy, ..." name="search"
+                            id="search" data-search>
+                    </div>
+
+                    <div class="search-suggestions hs-menu-inner" data-user-cards-container>
+                        <template class="search-suggestion" data-user-cards-template>
+                            <div class="card hide dropdown-item">
+                                <div class="row no-gutters">
+
+                                    <div class="col-md-3 col-12">
+                                        <img src="" alt="picture of image" class="card-img img-fluid p-3 border"
+                                            data-image>
                                     </div>
-                                </div>
 
-                                <div class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0"> <!-- Added responsive padding classes -->
-                                    <p class="search-price" data-price></p>
+                                    <div class="col-md-6 col-12">
+                                        <div class="card-body">
+                                            <h3 class="card-title" data-header></h3>
+                                            <p class="card-text" data-body></p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0">
+                                        <!-- Added responsive padding classes -->
+                                        <p class="search-price" data-price></p>
+                                    </div>
+
                                 </div>
-                                
                             </div>
-                        </div>
-                    </template>
+                        </template>
+                    </div>
                 </div>
             </div>
+
+            <a href="cart.html">
+                <div class="cart">
+                    <i class="bx bx-cart"></i>
+                </div>
+            </a>
+
         </div>
+    </header>
 
-        <a href="cart.html">
-            <div class="cart">
-                <i class="bx bx-cart"></i>
-            </div>
-        </a>
 
+    <div class="raw" style="height: 500px;"></div>
+
+    <!-- Cookie -->
+    <div id="lawmsg" class="alert alert-info alert-dismissible h6 fade show fixed-bottom" role="alert">
+        <p class="">
+
+            <button type="button" id="closeCookie" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            &nbsp; We use cookies on this website to distinguish you from other users. We use this data to enhance your
+            experience and for targeted advertising. By continuing to use this website you consent to our use of
+            cookies. For more information, please see our
+            <a href="https://info.profilesonly.com" target="_blank">Cookie Policy</a>.
+        </p>
     </div>
-</header>
 
+    <!-- Back to top button -->
+    <a href="#" id="backtotop" class="active back-to-top d-flex align-items-center justify-content-center"><i
+            class='bx bx-up-arrow-alt'></i></a>
 
-<div class="raw" style="height: 500px;"></div>
+    <!-- Footer -->
+    <footer>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="footer-img"></div>
 
-<!-- Cookie -->
-<div id="lawmsg" class="alert alert-info alert-dismissible h6 fade show fixed-bottom" role="alert">
-  <p class="">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Whisker Wonders</span></strong>
+            </div>
+        </div>
+    </footer>
 
-  <button type="button" id="closeCookie" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-  </button>
+    <!-- Bootstrap Java - JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
 
-    &nbsp; We use cookies on this website to distinguish you from other users. We use this data to enhance your experience and for targeted advertising. By continuing to use this website you consent to our use of cookies. For more information, please see our
-    <a href="https://info.profilesonly.com" target="_blank">Cookie Policy</a>.
-  </p>
-</div>
-
-<!-- Back to top button -->
-<a href="#" id="backtotop" class="active back-to-top d-flex align-items-center justify-content-center"><i class='bx bx-up-arrow-alt'></i></a>
-
-<!-- Footer -->
-<footer> 
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="footer-img"></div>
-
-      <div class="copyright">
-        &copy; Copyright <strong><span>Whisker Wonders</span></strong>
-      </div>
-    </div>   
-</footer>    
-
-<!-- Bootstrap Java - JQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-
-<!-- JS Files -->
-<script type="text/javascript" src="../js/search.js"></script>
-<script type="text/javascript" src="../js/cookies.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/cart.js"></script>
+    <!-- JS Files -->
+    <script type="text/javascript" src="../js/search.js"></script>
+    <script type="text/javascript" src="../js/cookies.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/productsArray.js"></script>
+    <!-- <script type="text/javascript" src="../js/cart.js"></script> -->
 
 </body>
+
 </html>
