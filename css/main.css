@@ -500,7 +500,7 @@ input:focus {
 
 footer {
     background-color: #E2B899;
-    height: 360px;
+    height: fit-content;
     width: 100%;
     text-align: center;
     padding: 10px 0 0 0;
@@ -582,17 +582,6 @@ footer .footer-img {
     }
 }
 
-footer .footer-info h4::after {
-    content: "";
-    position: relative;
-    display: block;
-    width: 50%;
-    height: 1px;
-    left: 25%;
-    background: #000;
-    margin: auto;
-    margin: 0px 0px 5px 0px;
-}
 
 /* --- Cookies ---------------------------------------------------*/
 
@@ -802,10 +791,19 @@ rgba(0,0,0,0.25);
 
 .product-info{
     background-color: #f6f3e0;
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 50px;
+
 }
 
 .about{
     background-color: #f6f3e0;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 50px;
+    margin-top: 60px;
+   
   
 }
 
@@ -813,7 +811,15 @@ rgba(0,0,0,0.25);
     margin: 50px 0;
 }
 
-.product-info p, .about p{}
+
+/*---------- Product list interface-----------------------------*/
+
+.product-list button{
+    background-color: #e1ab9b;
+    
+}
+
+
 
 /*----------------------------------- ANDRA CSS -------------------------------------------------------------*/
 
@@ -845,3 +851,5 @@ rgba(0,0,0,0.25);
 .info img{
 display:grid;
 }
+
+
