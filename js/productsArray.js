@@ -1,5 +1,4 @@
 let products = [{
-
     id: 1,
     name: "Bounce & Fetch Buddy",
     link: "../html/thisproduct.html?id=1",
