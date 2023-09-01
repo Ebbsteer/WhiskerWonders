@@ -525,7 +525,8 @@ header .cart{
 }    
 
 .productPage img{
-    max-width: 60%;
+    max-width: 40%;
+    min-width: 30%;
     margin-top: 30px;
 }    
 
@@ -552,7 +553,7 @@ header .cart{
     cursor: pointer;
 }
 
-
+/*--------------------------------*/
 .small-container{
     max-width: 800px;
     margin: auto;
