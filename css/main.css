@@ -428,6 +428,11 @@ header .cart{
     padding: 20px 10vw;
 }
 
+.carousel-item a:hover {
+    color: pink;
+
+}
+
 .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
@@ -650,17 +655,16 @@ a{
 .second{
     font-family: "Inter", sans-serif;
     background-color: #ffe5d1;
-    padding: 20px 4vw;
+    padding: 20px 0px;
     justify-content: center;
     text-align: center;
 }
 
-.bg-second {
-    background-color: #f6f3e0;
-}
 
 .product-info{
     background-color: #f6f3e0;
+    padding: 0px 2vw;
+   
 }
 
 .product-info p, .about p{
@@ -674,9 +678,9 @@ a{
 
 
 .about{
-
+    background-color: #f6f3e0;
+    padding: 0 2vw;
 }
-
 
 /* --- Footer ----------------------------------------------------*/
 
