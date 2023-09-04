@@ -791,15 +791,6 @@ footer .footer-img {
 
 /*----------------------------------- Margo CSS -------------------------------------------------------------*/
 
-.aboutMain{
-    background-color: #fff8f3;
-    width: 700px;
-    height: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-  
 /* -------- Scroll bar custom -----------------KLAR-------------------*/
 
 #data{
@@ -868,6 +859,86 @@ rgba(0,0,0,0.25);
     
 }
 
+/*---------------------About Page-----------------------------*/
+
+.about-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.aboutMain{
+    background-color: #fff8f3;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.aboutText{
+    margin-top: 50px;
+}
+
+.aboutText p{
+    text-align: left;
+    margin-top: 50px;
+    margin-inline: 130px;
+    line-height: 1.8rem;
+}
+
+.aboutLinks{
+    margin-top: 70px;
+}
+
+.aboutLinks a{
+    color: white;
+}
+
+.aboutButtons{
+    margin-top: 50px;
+}
+
+.aboutLinks button {
+
+	text-align: center;
+	color:#DE914A;
+	width: 200px;
+	height: 50px;
+	border:none;
+	border-radius: 10px;
+	transition: ease-out 0.3s;
+	font-size: 1rem;
+	outline:none;
+	border:5px solid #5d103d;
+	position: relative;
+	z-index: 1; 
+	background-color: #744f43;
+	letter-spacing: 2px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+    
+}
+
+.aboutLinks button:hover{
+	cursor: pointer;
+}
+
+.aboutLinks button:before{
+	transition: 0.5s all ease;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: "";
+	background-color: #613929;
+}
+
+.aboutLinks button:hover:before {
+	transition: 0.5s all ease;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	z-index: -1;
+}
 
 
 /*----------------------------------- ANDRA CSS -------------------------------------------------------------*/
