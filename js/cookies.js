@@ -29,3 +29,7 @@ function setCookie(cookieName, cookieValue, numdaystilexpireasinteger) {
             setCookie("cookieName", "cookieValue", 2);
         }
     }
+
+addEventListener("load", () => {
+    document.getElementById("lawmsg").classList.add("hide");
+});
