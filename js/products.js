@@ -1,3 +1,15 @@
+const titles =
+{  dog: "Dog Products",
+cat: "Cat Products",
+hamster:"hampster",
+food: "fokodgoipdjgid",
+toys: "boobs hehehehhe",
+}
+;
+
+
+
+
 const userboxTemplate = document.querySelector("[data-user-boxs-template]");
   const userboxContainer = document.querySelector("[data-user-boxs-container]");
   
@@ -10,6 +22,26 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
   document.addEventListener('DOMContentLoaded', function () {
     // Get the category from the URL
     const categoryParam = (new URLSearchParams(window.location.search)).get("category");
+    const titleName = document.getElementById('title1') ;
+    const titleText = document.getElementById('titleText') ;
+    
+    if(categoryParam){
+    const imageURL = `../img/${categoryParam}.jpg`;
+    document.getElementById('bigImage').src=(imageURL);
+    titleName.textContent = categoryParam;
+
+    const categoryTitle = titles[categoryParam] || "Unknown Category";
+    titleText.textContent = categoryTitle;
+    }
+    else{
+      document.getElementById('bigImage').src="../img/welcomeAll.jpg"
+      titleName.textContent = "All Products";
+      titleText.textContent = "yknow stuff";
+    }
+
+ 
+   
+
 
     // Check if categoryParam is empty
     if (!categoryParam) {
@@ -95,6 +127,7 @@ function displayProducts(products) {
           addToCart(product);
       });
   });
+
 
   productList.appendChild(row);
 
