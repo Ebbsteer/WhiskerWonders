@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/receipt.css">
+    <title>Whisker Wonders - Receipt</title>
+</head>
+<body>
+    <table class="body-wrap">
+        <tbody>
+            <tr>
+                <td></td>
+                <td class="container" width="600">
+                    <div class="content">
+                        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="content-wrap aligncenter">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        <h2>Thank you for your purchase!</h2>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        <table class="invoice">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td id="receiptDate">June 01 2015</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table class="invoice-items" cellpadding="0"
+                                                                            cellspacing="0">
+                                                                            <tbody data-receipt-table>
+                                                                                <tr>
+                                                                                    <td>Service 1</td>
+                                                                                    <td class="alignright">$ 20.00</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Service 2</td>
+                                                                                    <td class="alignright">$ 10.00</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Shipping</td>
+                                                                                    <td class="alignright">149.99 kr</td>
+                                                                                </tr>
+                                                                                <tr class="total">
+                                                                                    <td class="alignright" width="80%">Total
+                                                                                    </td>
+                                                                                    <td class="alignright">$ 36.00</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        <button onclick="generatePDF()">Save as PDF</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        Whisker Wonders. Carl Krooks gata 9, Helsingborg
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="footer">
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="aligncenter content-block">Questions? Email <a
+                                                href="mailto:">support@company.inc</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+    addEventListener("load", (event) => {
+        const receiptTable = document.querySelector("[data-receipt-table]");
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        cartItems.forEach(product => {
+            if (product.quantity > 0) {
+                const productRow = document.createElement('tr');
+                receiptTable.appendChild(productRow);
+                const productCol = document.createElement('td');
+                productRow.appendChild(productCol);
+                
+                productCol.textContent = product.name;
+            }
+        });
+        console.log("Loaded");
+    });
+    function generatePDF() {
+            // Define the page size (A4 dimensions)
+            const pageWidth = 595;
+            const pageHeight = 842;
+
+            // Create a hidden div to hold the screenshot
+            const screenshotDiv = document.createElement('div');
+            screenshotDiv.style.position = 'absolute';
+            screenshotDiv.style.left = '0';
+            screenshotDiv.style.top = '0';
+            screenshotDiv.style.width = pageWidth + 'px';
+            screenshotDiv.style.height = pageHeight + 'px';
+            screenshotDiv.style.overflow = 'hidden';
+            document.body.appendChild(screenshotDiv);
+
+            html2canvas(document.body, {
+                scrollY: pageHeight, // Capture the entire webpage by scrolling
+                onrendered: function (canvas) {
+                    screenshotDiv.appendChild(canvas);
+
+                    // Calculate centering offsets
+                    const offsetX = (pageWidth - canvas.width) / 2;
+                    const offsetY = (pageHeight - canvas.height) / 2;
+
+                    const pdf = new jsPDF({
+                        unit: 'px',
+                        format: [pageWidth, pageHeight]
+                    });
+
+                    // Add the screenshot to the PDF with centering offsets
+                    pdf.addImage(canvas.toDataURL("image/jpeg"), 'JPEG', offsetX, offsetY, canvas.width, canvas.height);
+
+                    // Save the PDF
+                    pdf.save('ExportFile.pdf');
+
+                    // Remove the screenshot div
+                    document.body.removeChild(screenshotDiv);
+                }
+            });
+        }
+        addEventListener("load", (event) => {
+            let fullDate = new Date();
+            let dayDate = fullDate.getDate();
+            let monthDate = fullDate.getMonth();
+            let yearDate = fullDate.getFullYear();
+
+            document.getElementById("receiptDate").textContent = "Date of Purchase: " + dayDate + "/" + monthDate + " - " + yearDate;
+        });
+</script>
+</body>
+
+</html>
