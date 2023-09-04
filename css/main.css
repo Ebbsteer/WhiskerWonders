@@ -66,8 +66,12 @@ h5,
     cursor: pointer;
 }
 
+.dark-light-active .dark-light-toggle {
+    background-color: #b68a69;
+}
+
 .dark-light-toggle:hover {
-    background: #a56e46;
+    background: #b68a69;
     color: #fff;
 }
 
@@ -614,7 +618,7 @@ footer .footer-img {
     margin: auto;
 }    
 
-.dark-light-active footer .footer-container .footer-img {
+.dark-light-active footer .footer-img {
     background: url("../img/logo/lightTransLogo.png") center;
 }   
 
@@ -662,6 +666,31 @@ footer .footer-img {
         height: 1px;
     }
 }
+
+@media (max-width:767px) {
+    footer p {
+        margin-inline: 20%;
+    }
+}
+
+footer .footer-about-link {
+    text-decoration: underline;
+}
+
+footer .footer-about-link:hover {
+    color: rgb(192, 53, 192);
+    text-decoration: underline;
+}
+
+footer .footer-links-link {
+    text-decoration: underline;    
+}
+
+footer .footer-links-link:hover {
+    color: rgb(192, 53, 192);
+    text-decoration: underline;
+}
+
 
 
 /* --- Cookies ---------------------------------------------------*/
