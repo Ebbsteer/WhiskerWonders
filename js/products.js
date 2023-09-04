@@ -1,3 +1,15 @@
+const titles =
+{  dog: "Dog Products",
+cat: "Cat Products",
+hamster:"hampster",
+food: "fokodgoipdjgid",
+toys: "boobs hehehehhe",
+}
+;
+
+
+
+
 const userboxTemplate = document.querySelector("[data-user-boxs-template]");
   const userboxContainer = document.querySelector("[data-user-boxs-container]");
   
@@ -10,6 +22,26 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
   document.addEventListener('DOMContentLoaded', function () {
     // Get the category from the URL
     const categoryParam = (new URLSearchParams(window.location.search)).get("category");
+    const titleName = document.getElementById('title1') ;
+    const titleText = document.getElementById('titleText') ;
+    
+    if(categoryParam){
+    const imageURL = `../img/${categoryParam}.jpg`;
+    document.getElementById('bigImage').src=(imageURL);
+    titleName.textContent = categoryParam;
+
+    const categoryTitle = titles[categoryParam] || "Unknown Category";
+    titleText.textContent = categoryTitle;
+    }
+    else{
+      document.getElementById('bigImage').src="../img/welcomeAll.jpg"
+      titleName.textContent = "All Products";
+      titleText.textContent = "yknow stuff";
+    }
+
+ 
+   
+
 
     // Check if categoryParam is empty
     if (!categoryParam) {
@@ -42,18 +74,18 @@ function displayProducts(products) {
 
   // Create a row for the product cards
   let row = document.createElement('div');
-  row.className = 'row';
+  row.className = 'row justify-content-center';
 
   products.forEach(product => {
       productNumb++;
 
       // Create a column for each product card
       const productCol = document.createElement('div');
-      productCol.className = 'col-md-4  mb-3'; // Adjust this for responsiveness
-
+      productCol.className = 'col-lg-3 col-md-4 col-sm-6 col-8 mb-3 ';  // Adjust this for responsiveness
+    
       const productCard = document.createElement('div');
-      productCard.className = 'card';
-
+      productCard.className = 'card px-2 py-2';
+    
       const productImage = document.createElement('img');
       productImage.className = 'card-img-top';
       productImage.src = product.image;
@@ -95,6 +127,7 @@ function displayProducts(products) {
           addToCart(product);
       });
   });
+
 
   productList.appendChild(row);
 
