@@ -54,7 +54,7 @@ h5,
     font-size: 32px;
     transition: all 0.4s;
     outline: none !important;
-    background-color: #c6a48b;
+    background-color: #a56e46;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -67,7 +67,7 @@ h5,
 }
 
 .dark-light-toggle:hover {
-    background: #b68a69;
+    background: #a56e46;
     color: #fff;
 }
 
@@ -98,7 +98,7 @@ h5,
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #c6a48b;
+    background: #a56e46;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -142,7 +142,7 @@ h5,
 }
   
 .dark-light-active .back-to-top:hover {
-    background: #b68a69;
+    background: #b68169;
     color: #fff;
 }
   
@@ -397,7 +397,9 @@ header .cart{
 
 
 /*---------- Product List-----------------------------*/
-
+.product-list button{
+    border: none;
+}
 .row_product_col_md_4{
     margin-bottom: 30px;
 }
@@ -776,7 +778,7 @@ footer .footer-img {
 }
 
 .carousel-item a:hover {
-    color: pink;
+    color: rgb(113, 161, 184);
 
 }
 
@@ -790,7 +792,7 @@ footer .footer-img {
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: #e1e1e1;
+    background-color: #b38686;
     width: 6vh;
     height: 6vh;
     border-radius: 50%;
