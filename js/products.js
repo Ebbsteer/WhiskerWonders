@@ -74,18 +74,18 @@ function displayProducts(products) {
 
   // Create a row for the product cards
   let row = document.createElement('div');
-  row.className = 'row';
+  row.className = 'row justify-content-center';
 
   products.forEach(product => {
       productNumb++;
 
       // Create a column for each product card
       const productCol = document.createElement('div');
-      productCol.className = 'col-md-4  mb-3'; // Adjust this for responsiveness
-
+      productCol.className = 'col-lg-3 col-md-4 col-sm-6 col-8 mb-3 ';  // Adjust this for responsiveness
+    
       const productCard = document.createElement('div');
-      productCard.className = 'card';
-
+      productCard.className = 'card px-2 py-2';
+    
       const productImage = document.createElement('img');
       productImage.className = 'card-img-top';
       productImage.src = product.image;
