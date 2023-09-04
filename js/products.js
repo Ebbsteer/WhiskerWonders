@@ -2,7 +2,7 @@ const titles =
 {  dog: "Dog accessories are essential items that can enhance the comfort, safety, and style of your furry friend.",
 cat: "Cat accessories are essential items that can enhance the comfort, well-being, and entertainment of your feline companion",
 hamster:"When selecting accessories for your gnagare pet, it's essential to consider their species-specific needs, cage size, and preferences.",
-food: "Give your beloved pet the nutrition they deserve with our premium pet food, crafted for their health and happiness.",
+treats: "Give your beloved pet the nutrition they deserve with our premium pet food, crafted for their health and happiness.",
 toys: "Elevate playtime for your furry friend with our exciting selection of pet toys – the perfect way to keep them entertained and active",
 }
 ;
