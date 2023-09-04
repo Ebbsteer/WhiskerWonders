@@ -307,6 +307,10 @@ header .cart{
     font-size: 50px;
     padding: auto 0px;
     margin-right: 20px;
+}
+.cart-number {
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
 } 
 
 @media (max-width: 700px) {
@@ -326,7 +330,6 @@ header .cart{
         margin-right: 10px;
     } 
 }
-
 
 
 /*---------- Product List-----------------------------*/
