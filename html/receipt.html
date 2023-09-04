@@ -41,23 +41,7 @@
                                                                         <table class="invoice-items" cellpadding="0"
                                                                             cellspacing="0">
                                                                             <tbody data-receipt-table>
-                                                                                <tr>
-                                                                                    <td>Service 1</td>
-                                                                                    <td class="alignright">$ 20.00</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Service 2</td>
-                                                                                    <td class="alignright">$ 10.00</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>Shipping</td>
-                                                                                    <td class="alignright">149.99 kr</td>
-                                                                                </tr>
-                                                                                <tr class="total">
-                                                                                    <td class="alignright" width="80%">Total
-                                                                                    </td>
-                                                                                    <td class="alignright">$ 36.00</td>
-                                                                                </tr>
+                                                                                
                                                                             </tbody>
                                                                         </table>
                                                                     </td>
@@ -86,8 +70,7 @@
                             <table width="100%">
                                 <tbody>
                                     <tr>
-                                        <td class="aligncenter content-block">Questions? Email <a
-                                                href="mailto:">support@company.inc</a></td>
+                                        <td class="aligncenter content-block">&copy; Whisker Wonders</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -100,6 +83,7 @@
     </table>
     <script type="text/javascript">
     addEventListener("load", (event) => {
+        let totalResult = 0;
         const receiptTable = document.querySelector("[data-receipt-table]");
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
@@ -109,10 +93,46 @@
                 receiptTable.appendChild(productRow);
                 const productCol = document.createElement('td');
                 productRow.appendChild(productCol);
-                
+                const productCol2 = document.createElement('td');
+                productRow.appendChild(productCol2);
+
+                productCol2.classList.add("alignright");
+
                 productCol.textContent = product.name;
+                productCol2.textContent = product.quantity + " x " + product.price + " kr";
+
+                totalResult = parseFloat(totalResult) + (parseFloat(product.price) * parseFloat(product.quantity));
             }
         });
+        const productShipRow = document.createElement('tr');
+        receiptTable.appendChild(productShipRow);
+        const productShipCol = document.createElement('td');
+        productShipRow.appendChild(productShipCol);
+        const productShipCol2 = document.createElement('td');
+        productShipRow.appendChild(productShipCol2);
+
+        productShipCol2.classList.add("alignright");
+
+        productShipCol.textContent = "Shipping";
+        productShipCol2.textContent = "149.99 kr";
+
+        const productTotalRow = document.createElement('tr');
+        receiptTable.appendChild(productTotalRow);
+        const productTotalCol = document.createElement('td');
+        productTotalRow.appendChild(productTotalCol);
+        const productTotalCol2 = document.createElement('td');
+        productTotalRow.appendChild(productTotalCol2);
+
+        productTotalRow.classList.add("total");
+        productTotalCol.classList.add("alignright");
+        productTotalCol.width = "80%";
+        productTotalCol2.classList.add("alignright");
+
+        productTotalCol.textContent = "Total: ";
+        totalResult = (parseFloat(totalResult) + 149.99);
+        productTotalCol2.textContent = totalResult + " kr";
+
+
         console.log("Loaded");
     });
     function generatePDF() {
