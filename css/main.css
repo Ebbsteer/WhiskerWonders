@@ -395,7 +395,9 @@ header .cart{
 
 
 /*---------- Product List-----------------------------*/
-
+.product-list button{
+    border: none;
+}
 .row_product_col_md_4{
     margin-bottom: 30px;
 }
