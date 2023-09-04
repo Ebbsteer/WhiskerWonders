@@ -35,58 +35,71 @@ const outputElement = document.getElementById("prodnumber");
 
 
 function displayProducts(products) {
-    const productList = document.querySelectorAll('.product-list');
-  
-    // Clear the existing product lists
-    productList.forEach(list => {
-        list.innerHTML = '';
-    });
+  const productList = document.querySelector('.product-list');
 
-    // Create and append product elements to each list
-    productList.forEach(list => {
-        products.forEach(product => {
-          
-          productNumb++;
-          
-            const productDiv = document.createElement('div');
-            productDiv.className = 'product';
+  // Clear the existing product list
+  productList.innerHTML = '';
 
-            const productName = document.createElement('h2');
-            productName.textContent = product.name;
+  // Create a row for the product cards
+  let row = document.createElement('div');
+  row.className = 'row';
 
-            const productLink = document.createElement('a');
-            productLink.href = product.link;
+  products.forEach(product => {
+      productNumb++;
+
+      // Create a column for each product card
+      const productCol = document.createElement('div');
+      productCol.className = 'col-md-4  mb-3'; // Adjust this for responsiveness
+
+      const productCard = document.createElement('div');
+      productCard.className = 'card';
+
+      const productImage = document.createElement('img');
+      productImage.className = 'card-img-top';
+      productImage.src = product.image;
+      productImage.alt = product.name;
+
+      const productLink = document.createElement('a');
+        productLink.href = product.link;
+        productLink.className = 'card-link';
+
+      const cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
+
+      const productName = document.createElement('h5');
+      productName.className = 'card-title';
+      productName.textContent = product.name;
+
+      const productPrice = document.createElement('p');
+      productPrice.className = 'card-text';
+      productPrice.textContent = `${product.price} kr`;
+
+      const addToCartButton = document.createElement('button');
+      addToCartButton.className = 'btn btn-primary';
+      addToCartButton.textContent = 'Add to Cart';
+      addToCartButton.setAttribute('data-name', product.name);
+      addToCartButton.setAttribute('data-price', product.price);
+
+      cardBody.appendChild(productLink);
+      cardBody.appendChild(productPrice);
+      cardBody.appendChild(addToCartButton);
+
+      productCard.appendChild(productImage);
+      productCard.appendChild(cardBody);
       
-            const productPrice = document.createElement('p');
-            productPrice.textContent = `${product.price} kr`;
+      productLink.appendChild(productName);
+      productCol.appendChild(productCard);
+      row.appendChild(productCol);
 
-            const addToCartButton = document.createElement('button');
-            addToCartButton.classList.add('add-to-cart');
-            addToCartButton.textContent = 'Add to Cart';
-            addToCartButton.setAttribute('data-name', product.name);
-            addToCartButton.setAttribute('data-price', product.price);
+      addToCartButton.addEventListener('click', () => {
+          addToCart(product);
+      });
+  });
 
-            const productImage = document.createElement('img');
-            productImage.src = product.image;
-            productImage.alt = product.name; // Set an alt attribute for accessibility
+  productList.appendChild(row);
 
-            productDiv.appendChild(productImage);
-            productDiv.appendChild(productLink);
-        
-            productLink.appendChild(productName);
-            productDiv.appendChild(productPrice);
-            productDiv.appendChild(addToCartButton);
 
-            list.appendChild(productDiv);
-
-            addToCartButton.addEventListener('click', () => {
-                addToCart(product);
-                
-               
-            });
-        });
-    });
-   
+// Rest of your code...
 
     outputElement.textContent = productNumb + " / 12"  ;
 }

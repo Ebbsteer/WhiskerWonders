@@ -169,6 +169,7 @@ const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 // Display cart items with quantities greater than 0
 addEventListener("load", (event) => {
+  updateCartCounter();
   const productManyItems = document.querySelector("[data-product-manyItems]");
   productManyItems.textContent = cartItems.length + " items";
   const productSummaryCount = document.querySelector("[data-product-summary-count]");
@@ -247,4 +248,10 @@ addEventListener("load", (event) => {
 
 function updateLocalStorage() {
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCartCounter();
+}
+
+function updateCartCounter() {
+  let cartCounter = document.getElementById("cart-number");
+  cartCounter = cartItems.length;
 }
