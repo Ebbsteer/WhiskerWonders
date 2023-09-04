@@ -77,9 +77,18 @@
 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 function updateCartCounter() {
-  let cartCounter = document.getElementById("cart-number");
-  cartCounter = cartItems.length;
+  const cartCounter = document.getElementById("cart-number");
+  let cartCounterNumber = 0;
+  cartItems.forEach(item => {
+      cartCounterNumber += item.quantity; 
+  });
+  cartCounter.textContent = cartCounterNumber;
 }
+
+addEventListener("load", (event) => {
+  updateCartCounter();
+});
+
 
 function dark() {
   document.querySelector('body').classList.toggle("dark-light-active");
@@ -224,7 +233,6 @@ function dark() {
    * Scroll with ofset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
-    updateCartCounter();
     document.getElementById("backtotop").classList.add("hide");
     if (window.location.hash) {
       if (select(window.location.hash)) {

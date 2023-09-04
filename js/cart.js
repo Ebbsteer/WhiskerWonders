@@ -162,21 +162,20 @@
 const cartItemsContainer = document.getElementById('cart-items');
 const productTemplate = document.querySelector("[data-product-template]");
 const productContainer = document.querySelector("[data-product-container]");
+let cartCounterNumber = 0;
+let priceSummary = 0;
 // const productImage = document.querySelector("[data-product-image]");
 
 // Get cart items from local storage
-const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+// const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 // Display cart items with quantities greater than 0
 addEventListener("load", (event) => {
   updateCartCounter();
   const productManyItems = document.querySelector("[data-product-manyItems]");
-  productManyItems.textContent = cartItems.length + " items";
+  productManyItems.textContent = cartCounterNumber + " items";
   const productSummaryCount = document.querySelector("[data-product-summary-count]");
-  productSummaryCount.textContent = "Items: " + cartItems.length;
-  const productSummaryPrice = document.querySelector("[data-product-summary-price]");
-  const productSummaryTotal = document.querySelector("[data-product-summary-total]");
-  let priceSummary = 0;
+  productSummaryCount.textContent = "Items: " + cartCounterNumber;
     
   cartItems.forEach(item => {
   if (item.quantity > 0) {
@@ -200,16 +199,37 @@ addEventListener("load", (event) => {
     const productPrice = productList.querySelector("[data-product-price]");
     productPrice.textContent = item.price + " kr";
     
+    productQuantity.addEventListener("change", () => {
+        item.quantity = parseInt(productQuantity.value);
+        updateCartCounter();
+        updateLocalStorage();
+        priceSummary = 0;
+        priceSummary = (priceSummary += (item.price * item.quantity));
+        priceTotal = (parseFloat(priceSummary) + 50);
+        updateCartPrice();
+    });
     productContainer.append(productList);
     productContainer.append(productBreak);
     priceSummary = (priceSummary += (item.price * item.quantity));
   }
   console.log("Loaded");
 })
-  productSummaryPrice.textContent = priceSummary + " kr";
-  let priceTotal = (parseFloat(priceSummary) + 50);
-  productSummaryTotal.textContent = priceTotal + " kr";
+  updateCartPrice();
 });
+
+function updateCartPrice() {
+  const productSummaryPrice = document.querySelector("[data-product-summary-price]");
+  const productSummaryTotal = document.querySelector("[data-product-summary-total]");
+  let priceTotal = (parseFloat(priceSummary) + 50);
+  cartItems.forEach(item => {
+    if (item.quantity > 0) {
+      priceSummary = (priceSummary += (item.price * item.quantity));
+    }
+  });
+  productSummaryPrice.textContent = priceSummary + " kr";
+  productSummaryTotal.textContent = priceTotal + " kr";
+}
+
   //   const itemName = document.createElement('h3');
   //   itemName.textContent = item.name;
 
@@ -252,6 +272,10 @@ function updateLocalStorage() {
 }
 
 function updateCartCounter() {
-  let cartCounter = document.getElementById("cart-number");
-  cartCounter = cartItems.length;
+  const cartCounter = document.getElementById("cart-number");
+  cartCounterNumber = 0;
+  cartItems.forEach(item => {
+      cartCounterNumber += item.quantity; 
+  });
+  cartCounter.textContent = cartCounterNumber;
 }
