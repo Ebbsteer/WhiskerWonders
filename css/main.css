@@ -276,8 +276,10 @@ header .search-wrapper .search-inputs input {
 header .search-wrapper .search-inputs .form-control:focus {
     position: absolute;
     display: block;
+    width: 80%;
     top: 44px;
-    left: 40%;
+    left: 12%;
+    z-index: 10;
 }
 
 @media (max-width: 500px) {
