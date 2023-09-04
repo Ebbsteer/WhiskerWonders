@@ -207,7 +207,7 @@ addEventListener("load", (event) => {
         updateLocalStorage();
         priceSummary = 0;
         priceSummary = (priceSummary += (item.price * item.quantity));
-        priceTotal = (parseFloat(priceSummary) + 50);
+        priceTotal = (parseFloat(priceSummary) + 149.99);
         location.reload(true);
     });
 
@@ -217,9 +217,9 @@ addEventListener("load", (event) => {
   }
   console.log("Loaded");
 })
-  productSummaryPrice.textContent = priceSummary + " kr";
-  let priceTotal = (parseFloat(priceSummary) + 50);
-  productSummaryTotal.textContent = priceTotal + " kr";
+  productSummaryPrice.textContent = priceSummary.toFixed(2) + " kr";
+  let priceTotal = (parseFloat(priceSummary) + 149.99);
+  productSummaryTotal.textContent = priceTotal.toFixed(2) + " kr";
 });
 
   //   const itemName = document.createElement('h3');
