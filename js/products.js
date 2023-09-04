@@ -36,7 +36,7 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
     else{
       document.getElementById('bigImage').src="../img/welcomeAll.jpg"
       titleName.textContent = "All Products";
-      titleText.textContent = "yknow stuff";
+      titleText.textContent = "have a look at our stock of items with varitey from dogs toys to hamster treats :)";
     }
 
  
