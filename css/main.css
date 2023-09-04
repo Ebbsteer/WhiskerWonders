@@ -350,18 +350,11 @@ header .search-wrapper .search-suggestions {
     padding: 0px;
 }
 
-@media () {
-    header .search-wrapper .search-suggestions {
-        top: 90px;
-        left: 5px;
-    }
-}
-
 .card-search {
     background-color: #fff;
 }
 
-.card-img img {
+.card-img {
     width: 100px;
 }
 
