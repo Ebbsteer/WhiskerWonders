@@ -85,8 +85,7 @@ function displayProducts(products) {
     
       const productCard = document.createElement('div');
       productCard.className = 'card';
-      productCard.style = 'height: 430px';
-    
+      productCard.style = 'height: 100%';
       const productImage = document.createElement('img');
       productImage.className = 'card-img-top';
       productImage.src = product.image;
