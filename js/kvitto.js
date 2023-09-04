@@ -1,5 +1,5 @@
 document.getElementById('PdfButton').addEventListener('click', () => {
-    fetch('productPage.html') // Fetch the content of products.html
+    fetch('index.html') // Fetch the content of products.html
         .then(response => response.text())
         .then(htmlContent => {
             // Create a new HTML element with the fetched content
