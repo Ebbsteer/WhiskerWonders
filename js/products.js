@@ -84,7 +84,7 @@ function displayProducts(products) {
       productCol.className = 'col-lg-3 col-md-4 col-sm-6 col-8 mb-3 ';  // Adjust this for responsiveness
     
       const productCard = document.createElement('div');
-      productCard.className = 'card px-2 py-2';
+      productCard.className = 'card px-1 py-1';
     
       const productImage = document.createElement('img');
       productImage.className = 'card-img-top';
@@ -113,14 +113,19 @@ function displayProducts(products) {
       addToCartButton.setAttribute('data-price', product.price);
 
       cardBody.appendChild(productLink);
+      cardBody.appendChild(productName);
       cardBody.appendChild(productPrice);
+      
       cardBody.appendChild(addToCartButton);
 
       productCard.appendChild(productImage);
-      productCard.appendChild(cardBody);
       
+      productCard.appendChild(cardBody);
+     
+      productLink.appendChild(productImage);
       productLink.appendChild(productName);
       productCol.appendChild(productCard);
+
       row.appendChild(productCol);
 
       addToCartButton.addEventListener('click', () => {
