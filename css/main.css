@@ -270,57 +270,100 @@ header .search-wrapper .search-inputs input {
     background-color: #f2e9e3;
     color: #272829;
     font-size: 16px;
+    padding: 6px;
     
 }
 
 header .search-wrapper .search-inputs .form-control:focus {
     position: absolute;
     display: block;
-    width: 80%;
+    width: 75%;
     top: 44px;
-    left: 12%;
+    left: 145px;
     z-index: 10;
+}
+
+@media (max-width: 900px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 70%;
+    }
+}
+
+@media (max-width: 750px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 65%;
+        left: 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 70%;
+        left: 85px;
+    }
+}
+
+@media (max-width: 450px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 65%;
+    }
+}
+
+@media (max-width: 400px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 60%;
+    }
+}
+
+@media (max-width: 350px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 55%;
+    }
+}
+
+@media (max-width: 300px) {
+    header .search-wrapper .search-inputs .form-control:focus {
+        width: 50%;
+    }
 }
 
 @media (max-width: 500px) {
     header .search-wrapper .search-inputs input{
         background-color: #f2e9e3;
         color: #272829;
-        font-size: 12px;
-        
     }
+}
+
+header .search-wrapper .search-suggestions .container-search {
+    width: 90%;
+    height: 100px;
 }
 
 header .search-wrapper .search-suggestions {
     position: absolute;
     display: block;
     top: 90px;
+    left: 110px;
     z-index: 999;
     width: fit-content;
     margin: 0px;
     padding: 0px;
 }
 
+@media () {
+    header .search-wrapper .search-suggestions {
+        top: 90px;
+        left: 5px;
+    }
+}
+
 .card-search {
     background-color: #fff;
-    width: 60vw;
 }
 
-.card-search .card-img {
+.card-img img {
     width: 100px;
-    height: 100px;
 }
-
-.card-search .card-body {
-    width: 200px;
-    height: 100px;
-}
-
-.card-search .search-price {
-    width: 100px;
-    height: 100px;
-}
-
 
 
 
