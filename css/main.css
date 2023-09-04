@@ -354,9 +354,10 @@ header .search-wrapper .search-suggestions {
     background-color: #fff;
 }
 
-.card-img {
-    width: 100px;
-}
+/* .card-image {
+    max-width: 100px;
+} */
+
 
 
 
@@ -368,6 +369,7 @@ header .cart{
     padding: auto 0px;
     margin-right: 20px;
 }
+
 .cart-number {
     font-size: 1.25rem;
     font-family: Arial, Helvetica, sans-serif;
