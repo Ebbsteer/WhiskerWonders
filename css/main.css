@@ -334,15 +334,20 @@ header .search-wrapper .search-inputs .form-control:focus {
     }
 }
 
+header .search-wrapper .search-suggestions {
+    padding-left: -85px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
 header .search-wrapper .search-suggestions .container-search {
     width: 90%;
-    height: 100px;
 }
 
 header .search-wrapper .search-suggestions {
     position: absolute;
     display: block;
-    top: 90px;
+    top: 100px;
     left: 110px;
     z-index: 999;
     width: fit-content;
@@ -354,9 +359,6 @@ header .search-wrapper .search-suggestions {
     background-color: #fff;
 }
 
-/* .card-image {
-    max-width: 100px;
-} */
 
 
 
