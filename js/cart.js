@@ -162,6 +162,7 @@
 const cartItemsContainer = document.getElementById('cart-items');
 const productTemplate = document.querySelector("[data-product-template]");
 const productContainer = document.querySelector("[data-product-container]");
+const promoCodeInput = document.querySelector("[data-promoCode]");
 let cartCounterNumber = 0;
 // const productImage = document.querySelector("[data-product-image]");
 
@@ -220,7 +221,20 @@ addEventListener("load", (event) => {
   productSummaryPrice.textContent = priceSummary.toFixed(2) + " kr";
   let priceTotal = (parseFloat(priceSummary) + 149.99);
   productSummaryTotal.textContent = priceTotal.toFixed(2) + " kr";
+  
+  promoCodeInput.addEventListener("change", () => {
+  if (promoCodeInput.value == "FREE2023") {
+    alert("Code (FREE2023) has been added succesfully!");
+    productSummaryPrice.textContent = "0 kr";
+    productSummaryTotal.textContent = "149.99 kr";
+  }
+  else {
+        alert("Code (" + promoCodeInput.value + ") has NOT been added succesfully!");
+  }
 });
+});
+
+
 
   //   const itemName = document.createElement('h3');
   //   itemName.textContent = item.name;
