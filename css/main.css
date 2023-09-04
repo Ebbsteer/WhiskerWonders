@@ -835,14 +835,15 @@ rgba(0,0,0,0.25);
 
 /*---------------------About Page-----------------------------*/
 
+.about-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .aboutMain{
     background-color: #fff8f3;
-    max-width: 1200px;
-    height: 1100px;
-    margin: auto;
     text-align: center;
     font-family: "Inter", sans-serif;
-    margin-bottom: 200px;
 }
 
 .aboutText{
