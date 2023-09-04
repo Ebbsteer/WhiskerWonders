@@ -201,6 +201,12 @@ addEventListener("load", (event) => {
     const productPrice = productList.querySelector("[data-product-price]");
     productPrice.textContent = item.price + " kr";
     
+    productQuantity.addEventListener("change", () => {
+        item.quantity = productQuantity.value
+        updateCartCounter();
+        updateLocalStorage();
+    });
+
     productContainer.append(productList);
     productContainer.append(productBreak);
     priceSummary = (priceSummary += (item.price * item.quantity));
@@ -211,6 +217,7 @@ addEventListener("load", (event) => {
   let priceTotal = (parseFloat(priceSummary) + 50);
   productSummaryTotal.textContent = priceTotal + " kr";
 });
+
   //   const itemName = document.createElement('h3');
   //   itemName.textContent = item.name;
 
