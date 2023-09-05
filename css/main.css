@@ -16,6 +16,10 @@
     visibility: hidden;
 }
 
+main {
+    height: fit-content;
+    min-height: 80vh;
+}
 body {
     background-color: #ebdfd6;
     font-family: "Open Sans", sans-serif;
@@ -620,6 +624,7 @@ footer .footer-img {
     height: 90px;
     background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 8px;
 }    
 
 .dark-light-active footer .footer-img {
@@ -695,6 +700,9 @@ footer .footer-links-link:hover {
     text-decoration: underline;
 }
 
+footer .copyright {
+    margin: 25px auto 10px auto;
+}
 
 
 /* --- Cookies ---------------------------------------------------*/
@@ -817,6 +825,7 @@ footer .footer-links-link:hover {
 
 .card-carousel {
     margin: 0 0.5em;
+    padding-bottom: 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
     background-color: #fff;
@@ -937,8 +946,7 @@ rgba(0,0,0,0.25);
 /*---------------------About Page-----------------------------*/
 
 .about-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 .aboutMain{
@@ -946,10 +954,14 @@ rgba(0,0,0,0.25);
     text-align: center;
     font-family: "Inter", sans-serif;
     border-radius: 10px;
+    padding: 50px 0px;
 }
 
-.aboutText{
-    margin-top: 50px;
+.dark-light-active .aboutMain{
+    background-color: #32261c;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    border-radius: 10px;
 }
 
 .aboutText p{
@@ -957,6 +969,33 @@ rgba(0,0,0,0.25);
     margin-top: 50px;
     margin-inline: 130px;
     line-height: 1.8rem;
+}
+
+@media (max-width: 1000px) {
+    .aboutText p{
+        text-align: left;
+        margin-top: 25px;
+        margin-inline: 80px;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .aboutText p{
+        text-align: left;
+        margin-top: 25px;
+        margin-inline: 50px;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .aboutText p{
+        text-align: left;
+        margin-top: 25px;
+        margin-inline: 10px;
+        line-height: 1.8rem;
+    }
 }
 
 .aboutLinks{
@@ -967,12 +1006,7 @@ rgba(0,0,0,0.25);
     color: white;
 }
 
-.aboutButtons{
-    margin-top: 50px;
-}
-
 .aboutLinks button {
-
 	text-align: center;
 	color:#DE914A;
 	width: 200px;
@@ -982,14 +1016,17 @@ rgba(0,0,0,0.25);
 	transition: ease-out 0.3s;
 	font-size: 1rem;
 	outline:none;
-	border:5px solid #5d103d;
+	border: 5px solid #5d103d;
 	position: relative;
 	z-index: 1; 
 	background-color: #744f43;
 	letter-spacing: 2px;
-	margin-top: 30px;
-	margin-bottom: 40px;
-    
+    margin: 10px 0px;
+}
+
+.aboutLinks button {
+	border: 5px solid #270418;
+	background-color: #744f43;
 }
 
 .aboutLinks button:hover{
