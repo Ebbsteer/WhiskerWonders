@@ -143,10 +143,17 @@
 
         console.log("Loaded");
     });
+    function zoomIn() {
+            document.body.style.zoom = "1";
+    }
+    function zoomOut() {
+            document.body.style.zoom = "25%";
+        }
     function generatePDF() {
+            zoomOut();
             // Define the page size (A4 dimensions)
             const pageWidth = 595;
-            const pageHeight = 842;
+            const pageHeight = document.body.clientHeight;
 
             // Create a hidden div to hold the screenshot
             const screenshotDiv = document.createElement('div');
@@ -165,7 +172,7 @@
 
                     // Calculate centering offsets
                     const offsetX = (pageWidth - canvas.width) / 2;
-                    const offsetY = (pageHeight - canvas.height) / 20;
+                    const offsetY = (pageHeight - canvas.height) / 2;
 
                     const pdf = new jsPDF({
                         unit: 'px',
@@ -182,6 +189,10 @@
                     document.body.removeChild(screenshotDiv);
                 }
             });
+            setTimeout(() => {
+            zoomIn();
+            console.log("Delayed for 1 second.");
+            }, "500");
         }
 
         addEventListener("load", (event) => {
