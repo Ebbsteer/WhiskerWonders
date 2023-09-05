@@ -448,6 +448,22 @@ background-color: #000;
 
 }
 
+.card-products {
+    background-color: #fff;
+}
+
+.card-products-image {
+    margin-bottom: 10px;
+}
+
+.dark-light-active .card-products {
+    background-color: #ffffff48;
+}
+
+.dark-light-active .card-products p{
+    color: #fff;
+}
+
 .product-list {
 
     margin-bottom: 5%;

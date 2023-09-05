@@ -79,12 +79,12 @@ function displayProducts(products) {
     productCol.className = 'col-lg-3 col-md-4 col-sm-6 col-8 mb-3 ';  // Adjust this for responsiveness
 
     const productCard = document.createElement('div');
-    productCard.className = 'card';
+    productCard.className = 'card card-products';
     productCard.style = 'height: 100%';                            // make the card 
 
 
     const productImage = document.createElement('img');
-    productImage.className = 'card-img-top';
+    productImage.className = 'card-img card-products-image';
     productImage.src = product.image;
     productImage.alt = product.name;                       // create img and add class
 
