@@ -23,17 +23,20 @@ button {
     cursor: pointer;
     width: 200px;
     text-align: center;
-    background-color: #ffecde;
-    border: solid 3px #b49c8b;
+    color: #eee;
+    background: #e6998f;
+    border-radius: 30px;
+ 
     font-family: "Inter", sans-serif;
+    transition: background 0.5s;
 }
 
 button:hover {
-    background-color: #b49c8b;
+    background-color: #bd8d8d;
 }
 
 body {
-    background-color: rgba(255, 241, 221, 255);
+    background-color:#ebdfd6;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
     width: 100% !important;
