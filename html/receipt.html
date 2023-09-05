@@ -165,7 +165,7 @@
 
                     // Calculate centering offsets
                     const offsetX = (pageWidth - canvas.width) / 2;
-                    const offsetY = (pageHeight - canvas.height) / 2;
+                    const offsetY = (pageHeight - canvas.height) / 20;
 
                     const pdf = new jsPDF({
                         unit: 'px',
@@ -183,6 +183,7 @@
                 }
             });
         }
+
         addEventListener("load", (event) => {
             let fullDate = new Date();
             let dayDate = fullDate.getDate();
