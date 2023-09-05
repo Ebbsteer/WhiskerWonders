@@ -173,4 +173,10 @@ function addToCart(product) {
 
     // Update local storage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    const cartCounter = document.getElementById("cart-number");
+  cartCounterNumber = 0;
+  cartItems.forEach(item => {
+      cartCounterNumber += item.quantity; 
+  });
+  cartCounter.textContent = cartCounterNumber;
 }
