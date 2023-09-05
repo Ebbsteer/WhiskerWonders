@@ -920,29 +920,29 @@ footer .copyright {
 
 .second {
     font-family: "Inter", sans-serif;
-    background-color: #ffe5d1;
-    padding: 30px 0;
     text-align: center;
-    height: 600px;
+    height: fit-content;
+    padding: 0px 0px 30px 0px;
 }
 
-.product-info {
-    background-color: #f6f3e0;
-    max-width: 600px;
-    margin: auto;
-    padding-bottom: 50px;
-
+.product-info, .about {
+    background-color: #f6f3e0ab;
+    padding: 0px 4vw 30px 4vw;
+    margin: 0px 10px;
+    border-radius: 10px;
 }
 
-.about {
-    background-color: #f6f3e0;
-    max-width: 800px;
-    margin: auto;
-    padding-bottom: 50px;
-    margin-top: 60px;
-
-
+.dark-light-active .product-info, .dark-light-active .about {
+    background-color: #f6f3e011;
 }
+
+@media (max-width: 767px) {
+    .product-info, .about {
+        padding: 0px 8vw 30px 8vw;
+        margin: 10px 0px;
+    }
+}
+
 
 .product-info h4,
 .about h4 {
