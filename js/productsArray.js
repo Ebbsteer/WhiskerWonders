@@ -1,3 +1,4 @@
+//------------------All products listed with all information needed--------------------
 let products = [
   {
     id: 1,

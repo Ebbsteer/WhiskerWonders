@@ -15,7 +15,7 @@
     <!-- Boxicons File -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/receipt.css">
-    <title>Receipt - Whisker Wonders </title>
+    <title>Receipt | Whisker Wonders </title>
 </head>
 <body>
     <table class="body-wrap">
@@ -137,16 +137,23 @@
         productTotalCol2.classList.add("alignright");
 
         productTotalCol.textContent = "Total: ";
-        totalResult = (parseFloat(totalResult) + 149.99);
-        productTotalCol2.textContent = totalResult + " kr";
+        totalResult = (totalResult + 149.99);
+        productTotalCol2.textContent = totalResult.toFixed(2) + " kr";
 
 
         console.log("Loaded");
     });
+    function zoomIn() {
+            document.body.style.zoom = "1";
+    }
+    function zoomOut() {
+            document.body.style.zoom = "25%";
+        }
     function generatePDF() {
+            zoomOut();
             // Define the page size (A4 dimensions)
             const pageWidth = 595;
-            const pageHeight = 842;
+            const pageHeight = document.body.clientHeight;
 
             // Create a hidden div to hold the screenshot
             const screenshotDiv = document.createElement('div');
@@ -165,7 +172,7 @@
 
                     // Calculate centering offsets
                     const offsetX = (pageWidth - canvas.width) / 2;
-                    const offsetY = (pageHeight - canvas.height) / 20;
+                    const offsetY = (pageHeight - canvas.height) / 2;
 
                     const pdf = new jsPDF({
                         unit: 'px',
@@ -182,6 +189,10 @@
                     document.body.removeChild(screenshotDiv);
                 }
             });
+            setTimeout(() => {
+            zoomIn();
+            console.log("Delayed for 1 second.");
+            }, "500");
         }
 
         addEventListener("load", (event) => {
