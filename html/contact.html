@@ -52,8 +52,8 @@
                 </div>
 
                 <div class="contact">
-                    <a href="contact.html" class="contact">
-                        Contact
+                    <a href="about.html" class="contact">
+                        About
                     </a>
                 </div>
             </div>
@@ -68,35 +68,38 @@
 
                     <div class="search-suggestions hs-menu-inner" data-user-cards-container>
                         <template class="search-suggestion" data-user-cards-template>
-                            <div class="card hide dropdown-item">
-                                <div class="row no-gutters">
+                            <div class="card-search hide dropdown-item container-search">
+                                <div class="container-fluid">
+                                    <a href="../html/index.html" data-link>
+                                        <div class="row no-gutters">
 
-                                    <div class="col-md-3 col-12">
-                                        <img src="" alt="picture of image" class="card-img img-fluid p-3 border"
-                                            data-image>
-                                    </div>
+                                            <div class="col-sm-2">
+                                                <img src="" alt="picture of image" class="card-image img-fluid" data-image>
+                                            </div>
 
-                                    <div class="col-md-6 col-12">
-                                        <div class="card-body">
-                                            <h3 class="card-title" data-header></h3>
-                                            <p class="card-text" data-body></p>
+                                            <div class="col-sm-8">
+                                                <div class="card-body text-wrap">
+                                                    <h3 class="card-title" data-header></h3>
+                                                    <p class="card-text" data-body></p>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-sm-2 d-flex align-items-center justify-content-end">
+                                                <!-- Added responsive padding classes -->
+                                                <p class="search-price" data-price></p>
+                                            </div>
+
                                         </div>
-                                    </div>
-
-                                    <div
-                                        class="col-md-3 col-12 d-flex align-items-center justify-content-end pr-md-3 pr-0">
-                                        <!-- Added responsive padding classes -->
-                                        <p class="search-price" data-price></p>
-                                    </div>
-
+                                    </a>
                                 </div>
                             </div>
                         </template>
                     </div>
                 </div>
             </div>
-
-            <a href="cart.html">
+            <span id="cart-number" class="cart-number">1</span>
+            <a href="../html/cart.html">
                 <div class="cart">
                     <i class="bx bx-cart"></i>
                 </div>
@@ -104,9 +107,6 @@
 
         </div>
     </header>
-
-
-    <div class="raw" style="height: 500px;"></div>
 
     <!-- Cookie -->
     <div id="lawmsg" class="alert alert-info alert-dismissible h6 fade show fixed-bottom" role="alert">
