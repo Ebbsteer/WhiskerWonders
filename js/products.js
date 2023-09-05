@@ -26,7 +26,7 @@ const userboxTemplate = document.querySelector("[data-user-boxs-template]");
     const titleText = document.getElementById('titleText') ;
     
     if(categoryParam){
-    const imageURL = `../img/${categoryParam}.jpg`;
+    const imageURL = `../img/welcome${categoryParam}.jpg`;
     document.getElementById('bigImage').src=(imageURL);
     titleName.textContent = categoryParam;
 
