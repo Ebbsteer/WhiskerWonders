@@ -137,8 +137,8 @@
         productTotalCol2.classList.add("alignright");
 
         productTotalCol.textContent = "Total: ";
-        totalResult = (parseFloat(totalResult) + 149.99);
-        productTotalCol2.textContent = totalResult + " kr";
+        totalResult = (totalResult + 149.99);
+        productTotalCol2.textContent = totalResult.toFixed(2) + " kr";
 
 
         console.log("Loaded");
