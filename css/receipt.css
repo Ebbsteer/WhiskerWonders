@@ -14,7 +14,26 @@ img {
     max-width: 100%;
 }
 
+.bx {
+    padding-top: 20px;
+    font-size: 60px;
+}
+
+button {
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    background-color: #ffecde;
+    border: solid 3px #b49c8b;
+    font-family: "Inter", sans-serif;
+}
+
+button:hover {
+    background-color: #b49c8b;
+}
+
 body {
+    background-color: rgba(255, 241, 221, 255);
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
     width: 100% !important;
@@ -30,12 +49,9 @@ table td {
 /* -------------------------------------
     BODY & CONTAINER
 ------------------------------------- */
-body {
-    background-color: #f6f6f6;
-}
+
 
 .body-wrap {
-    background-color: #f6f6f6;
     width: 100%;
 }
 
